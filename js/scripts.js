@@ -217,21 +217,23 @@ $(document).ready(function () {
 function initMap() {
     var ceremonyLocation = {lat: 40.05277676277598, lng: -75.32337245210972};
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
-        zoom: 15,
+        zoom: 12,
         center: ceremonyLocation,
         scrollwheel: false
     });
 
-    var marker = new google.maps.Marker({
+    var marker1 = new google.maps.Marker({
         position: ceremonyLocation,
-        map: map
+        map: map,
+        title: "Ceremony"
     });
 
     var banquetLocation = {lat: 40.022860572142974, lng: -75.32603667570083};
 
-    var marker = new google.maps.Marker({
+    var marker2 = new google.maps.Marker({
         position: banquetLocation,
-        map: map
+        map: map,
+        title: "Banquet"
     });
 }
 
