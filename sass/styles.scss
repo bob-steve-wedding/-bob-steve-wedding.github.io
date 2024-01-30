@@ -251,7 +251,6 @@ Navigation
 Hero
 ========================================================================== */
 .hero {
-  min-height: 750px;
   background: url('../img/hero-min.jpg') center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -874,6 +873,19 @@ footer {
   }
 }
 
+.engagement_pics {
+  padding-bottom: 10px;
+}
+
+.wide-5 {
+  width: 20%;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  float: left;
+  padding-bottom: 15px;
+}
 /* ==========================================================================
 Bootstrap override
 ========================================================================== */
