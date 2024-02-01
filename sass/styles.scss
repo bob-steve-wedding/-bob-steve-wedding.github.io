@@ -252,10 +252,12 @@ Hero
 ========================================================================== */
 .hero {
   background: url('../img/hero-min.jpg') center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: black;
   position: relative;
 
   /*.rsvp-btn {
@@ -770,6 +772,9 @@ Google map
 /* ==========================================================================
 RSVP form
 ========================================================================== */
+.shift-up {
+  margin-top: -25%;
+}
 .rsvp {
   padding-bottom: 140px;
   .rsvp-form {
