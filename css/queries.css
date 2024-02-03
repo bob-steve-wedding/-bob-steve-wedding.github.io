@@ -13,7 +13,7 @@
 
 @media screen and (max-width: 1024px) {
     .hero .hero-content {
-        padding-top: 50%;
+        padding-top: 25%;
     }
 }
 
@@ -25,7 +25,7 @@
     }
 
     .hero .hero-content {
-        padding-top: 50%;
+        padding-top: 25%;
     }
 
     .header-nav {
@@ -261,16 +261,18 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-color: black;
-        min-height: 1100px;
+        background-position: bottom;
+        min-height: 700px;
+        max-height: none;
     }
 
     .hero-content {
-        padding-top: 50%;
+        padding-top: 25%;
     }
 }
 @media screen and (max-width: 640px) {
     .hero .hero-content {
-        padding-top: 50%;
+        padding-top: 25%;
     }
 
     #eng-pics .img-wrap i {
@@ -309,7 +311,7 @@
 
 @media screen and (max-width: 480px) {
     .hero .hero-content {
-        padding-top: 50%;
+        padding-top: 25%;
     }
     
     .hero .hero-content img {
@@ -373,7 +375,7 @@
 
 @media screen and (max-width: 320px) {
     .hero .hero-content {
-        padding-top: 50%;
+        padding-top: 25%;
     }
 
     .rsvp {
