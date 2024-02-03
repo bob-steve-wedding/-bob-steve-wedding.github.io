@@ -252,13 +252,14 @@ Hero
 ========================================================================== */
 .hero {
   background: url('../img/hero-min.jpg') center center;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  background-size: contain;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   background-repeat: no-repeat;
   background-color: black;
   position: relative;
+  min-height: 750px;
 
   /*.rsvp-btn {
     position: absolute;
@@ -279,7 +280,7 @@ Hero
     margin-bottom: 80px;
   }
   .hero-content {
-    padding-top: 25%;
+    padding-top: 40%;
   }
   .hero-content img {
     width: 55%;
