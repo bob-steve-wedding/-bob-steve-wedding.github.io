@@ -161,9 +161,10 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <p><strong>October 27</strong></p>
+                <h5><strong>October 27</strong></h5>
             </div>
             <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
+                <p><strong>Appleford Estate</strong></p>
                 <div class="wp3">
                     <h5>Ceremony and Cocktail Hour <span class="time">TBD</span></h5>
                     <p>Please join us for our ceremony to be held on the lawn of Appleford Estate, followed by a cocktail 
@@ -177,6 +178,7 @@
                 </div>
             </div>
             <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
+                <p><strong>JinDing Restaurant</strong></p>
                 <!-- TODO Try to fit in double happiness somewhere here?-->
                 <div class="wp4">
                     <h5>Tea Ceremony <span class="time">TBD</span></h5>
@@ -201,14 +203,15 @@
                     <i class="fa fa-barcode"></i>&nbsp;&nbsp;Dress Code
                 </a>
             </div>
+        </div>
 <!-- TODO Figure out details and how to organize Brunch section and Dress Code           
-            <div class="row">
-                <div class="col-md-12">
-                    <h5><strong>October 28</strong></h5>
-                </div>
-                <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
-                    <div class="wp3">
-                        <h5>Brunch <span class="time">TBD</span></h5>
+        <div class="row">
+            <div class="col-md-12">
+                <p><strong>October 28</strong></p>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
+                <div class="wp3">
+                    <h5>Brunch <span class="time">TBD</span></h5>
                         <p>For those who are from out of town (or just want to hang out), we will be holding a brunch 
                             the morning after our wedding. We hope to see you there!</p>
                     </div>
@@ -219,7 +222,7 @@
             <div class="col-xs-12 section-border section-padding">
             </div>
         </div>-->
-    </div>
+
 
     <div id="dc-modal" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
@@ -238,7 +241,6 @@
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
-
 </section>
 
 <section id="social" class="section-padding">
@@ -258,7 +260,7 @@
     <div class="container-fluid">
         <div class="row engagement_pics">
             <div class="col-md-12 text-center">
-                <h3 class="header">Engagement Pics</h3>
+                <h3 class="header">Engagement Photos</h3>
             </div>
         </div>
         <div class="row">
@@ -387,8 +389,166 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
+                <h3>Local Attractions</h3>
+                <p>Should you be visiting us from afar and have time to explore the local area, we'd love to share 
+                    a few choice recommendations for your visit.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4 text-center">
+            <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#ttd-modal">
+                <i class="fa fa-barcode"></i>&nbsp;&nbsp;Things to Do
+            </a>
+        </div>
+    </div>
+    <div id="ttd-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <!-- TODO Clean up in CSS + Add Hover(?) Color + Fix Lists -->
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
+                </button>
+                <div class="bar border-bottom">
+                    <button class="tablink bar-item button" onclick="openAttractions(event, 'Around Philly')">Around Philly</button>
+                    <button class="tablink bar-item button" onclick="openAttractions(event, 'Historical')">Historical</button>
+                    <button class="tablink bar-item button" onclick="openAttractions(event, 'Food & Drink')">Food & Drink</button>
+                </div>              
+                <div id="Around Philly" class="modal-body attractions">
+                    <h3>Around Philadelphia</h3>
+                    <p>Philadelphia, the City of Brotherly Love. There's always something to do around town, from Eakins Oval by the Art 
+                        Museum steps to on the streets of Chinatown and beyond. 
+                    </p>
+                    <ul>
+                        <li>Art Museum / Barnes Foundation</li>
+                        <li>Franklin Institute</li>
+                        <li>Academy of Natural Sciences</li>
+                        <li>Independence Seaport Museum</li>
+                        <li>Philadelphia Zoo / Elmwood Park Zoo</li>
+                        <li>King of Prussia Mall</li>
+                        <li>Eastern State Penitentiary</li>
+                        <li>Longwood Gardens</li>
+                        <li>Elfreth's Alley</li>
+                        <li>Sesame Place</li>
+                    </ul>
+                   </div>
+                 
+                   <div id="Historical" class="modal-body attractions">
+                    <h3>Historical</h3>
+                    <p>For the history buffs, the Philly area offers numerous locations to explore. In the Old City neighborhood,
+                        you can stroll the lawns of the Constitution Center or take a tour through the rooms of Independence Hall. 
+                        Or for a trip outside of the City, visit the fields of Valley Forge.</p>
+                    <ul>
+                        <li>National Constitution Center</li>
+                        <li>Liberty Bell</li>
+                        <li>Independence Hall</li>
+                        <li>Valley Forge National Park</li>
+                        <li>Museum of the American Revolution</li>
+                    </ul>
+                   </div>
+                 
+                   <div id="Food & Drink" class="modal-body attractions">
+                        <h3>Food & Drink</h3>
+                        <p>The streets of Philadelphia are filled with a diverse array of delicious food. Food trucks dot the
+                            street corners of Center City, and small BYOB restaurants line the streets. The legendary Reading Terminal
+                            Market is a Philly landmark.
+                        </p>
+                        <ul>
+                            <li>Reading Terminal Market</li>
+                            <li>Sabrina's Cafe</li>
+                            <li>Dalessandro's Steaks & Hoagies</li>
+                            <li>SpOt Gourmet Burgers</li>
+                            <li>Rita's Italian Ice</li>
+                            <li>Philly Pretzel Factory</li>
+                            <li>Lore's Chocolates</li>
+                            <li>Chinatown
+                                <ul>
+                                    <li>Tai Lake</li>                                    
+                                    <li>Penang Malaysian Cuisine</li>
+                                    <li>Happy Lamb Hotpot</li>
+                                    <li>Nine Ting</li>
+                                    <li>Tiger Sugar</li>
+                                </ul>
+                            </li>
+                            <li>Dim Sum
+                                <ul>
+                                    <li>Ocean Harbor</li>
+                                    <li>China Gourmet</li>
+                                </ul>
+                            </li>
+                            <li>Pizza
+                                <ul>
+                                    <li>Angelo's Pizzeria</li>
+                                    <li>Tacconelli's Pizzeria</li>
+                                </ul>
+                            </li>
+                            <li>Cheesesteaks
+                                <ul>
+                                    <li>Angelo's Pizzeria</li>
+                                    <li>John's Roast Pork</li>
+                                    <li>Jim's South Street</li>
+                                </ul>
+                            </li>
+                            <li>BBQ
+                                <ul>
+                                    <li>Zig Zag BBQ</li>
+                                    <li>Sweet Lucy's Smokehouse</li>
+                                </ul>
+                            </li>
+                            <li>Hoagies
+                                <ul>
+                                    <li>PrimoHoagies</li>
+                                    <li>Wawa</li>
+                                </ul>
+                            </li>
+                            <li>Noodles
+                                <ul>
+                                    <li>Terakawa Ramen</li>
+                                    <li>Hajimaru Ramen</li>
+                                    <li>Pho Ha Saigon</li>
+                                    <li>Pho Today</li>
+                                </ul>
+                            </li>
+                            <li>Korean
+                                <ul>
+                                    <li>Cafe Soho</li>
+                                    <li>DuBu</li>
+                                    <li>Surah</li>
+                                </ul>
+                            </li>
+                        </ul>
+                   </div>
+
+                   <!-- TODO Figure out how to make this script work in the scripts.js file-->
+                   <script>
+                        document.getElementsByClassName("tablink")[0].click();
+
+                        function openAttractions(evt, tabname) {
+                            var i, x, tablinks;
+                            x = document.getElementsByClassName("attractions");
+                            for (i = 0; i < x.length; i++) {
+                            x[i].style.display = "none";
+                            }
+                            tablinks = document.getElementsByClassName("tablink");
+                            for (i = 0; i < x.length; i++) {
+                            tablinks[i].classList.remove("light-grey");
+                            }
+                            document.getElementById(tabname).style.display = "block";
+                            evt.currentTarget.classList.add("light-grey");
+                        }
+                    </script>
+                 
+                   <!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
+</section>
+
+<section id="map" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
                 <h3>How do I get there?</h3>
-                <p>Please note that for guests who plan to drive to our event, the directions provided by Google Maps for "Appleford" end 
+                <p>For guests who plan to drive to our event, please note that the directions provided by Google Maps for "Appleford" end 
                     at the driveway entrance of the estate.<br/>We recommend using the links below for navigation.
                 </p>
             </div>
@@ -434,8 +594,6 @@
 
 <!-- TODO Add Transportation (Shuttle, Airport, SEPTA?) and Accomodations Information; only have some of this info currently,
     will have to be partial setup and updated later-->
-
-<!-- TODO Add Local Attractions Pop-Up -->
 
 <section class="rsvp text-center" id="rsvp">
 
