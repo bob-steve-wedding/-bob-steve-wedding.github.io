@@ -8,9 +8,10 @@
 <!--[if gt IE 8]><!-->
 <html class="no-js" lang="en"> <!--<![endif]-->
 <!-- TODO Update colors to wedding theme colors (mind visibility) -->
+
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Tracey & Stephen are getting married!</title>
     <meta name="description" content="We would like to invite you to our big day.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -56,155 +57,254 @@
     <link rel="stylesheet" href="css/styles.min.css">
     <link rel="stylesheet" href="css/queries.css">
     <link rel="stylesheet" href="node_modules/animate.css/animate.min.css" onerror="loadCssFromCDN('animate.css')">
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" onerror="loadCssFromCDN('font-awesome.css')">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css"
+        onerror="loadCssFromCDN('font-awesome.css')">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
+
 <body id="top">
-<!--[if lt IE 8]>
+    <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
 <![endif]-->
-<section class="hero">
-    <section class="navigation">
-        <header>
-            <div class="header-content">
-                <div class="logo"><a href="#"><img src="img/logo.png" alt="Logo"></a></div>
-                <div class="header-nav">
-                    <nav>
-                        <ul class="primary-nav">
-                            <li><a href="#intro">Our Story</a></li>
-                            <li><a href="#events">Events</a></li>
-                            <li><a href="#social">Social Media</a></li>
-                            <li><a href="#eng-pics">Engagement</a></li>
-                            <li class="hidden-sm hidden-xs"><a href="#video-bg">Glimpse of the city</a></li>
-                        </ul>
-                        <ul class="member-actions">
-                            <li><a href="#map" class="login">Venue</a></li>
-                            <li><a href="#rsvp" class="btn-white btn-small">RSVP</a></li>
-                        </ul>
-                    </nav>
+    <section class="hero">
+        <section class="navigation">
+            <header>
+                <div class="header-content">
+                    <div class="logo"><a href="#"><img src="img/logo.png" alt="Logo"></a></div>
+                    <div class="header-nav">
+                        <nav>
+                            <ul class="primary-nav">
+                                <li><a href="#intro">Our Story</a></li>
+                                <li><a href="#events">Events</a></li>
+                                <li><a href="#social">Social Media</a></li>
+                                <li><a href="#eng-pics">Engagement</a></li>
+                                <li class="hidden-sm hidden-xs"><a href="#video-bg">Glimpse of the city</a></li>
+                                <li><a href="#faq">FAQ</a></li>
+                            </ul>
+                            <ul class="member-actions">
+                                <!--TODO Venue doesn't seem to go to the right place on the page. Need to fix -->
+                                <li><a href="#map" class="login">Venue</a></li>
+                                <li><a href="#rsvp" class="btn-white btn-small">RSVP</a></li>
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="navicon">
+                        <a class="nav-toggle" href="#"><span></span></a>
+                    </div>
                 </div>
-                <div class="navicon">
-                    <a class="nav-toggle" href="#"><span></span></a>
+            </header>
+        </section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="hero-content text-center">
+                        <!--<h1>Tracey and Stephen</h1>-->
+                        <img src="img/logo-name.png">
+                        <!--<p class="intro">Tracey and Stephen are getting married!</p>-->
+                        <!--<a href="#" class="btn btn-fill btn-large btn-margin-right">Scroll Down</a> -->
+                    </div>
                 </div>
             </div>
-        </header>
+        </div>
     </section>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="hero-content text-center">
-                    <!--<h1>Tracey and Stephen</h1>-->
-                    <img src="img/logo-name.png">
-                    <!--<p class="intro">Tracey and Stephen are getting married!</p>-->
-                    <!--<a href="#" class="btn btn-fill btn-large btn-margin-right">Scroll Down</a> -->
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<section id="invitation" class="section-padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h3>We are getting married!</h3>
-                <p>The date is October 27<sup>th</sup> 2024, and we would love for you to be a part of
-                    it!</p>
-            </div>
-        </div>
-        <!-- TODO Script for Countdown Clock to 11 AM October 27, 2024 in DD HH MM SS ; should we make it 
-            so that there is a "days married" counter after?-->
-    </div>
-</section>
+    <section id="invitation" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div id="invitation-text" class="col-md-12 text-center">
+                    <script>
+                        if (new Date() > new Date("Oct 27, 2024 11:00:00 GMT-05:00")) {
+                            document.getElementById('invitation-text').innerHTML = '<h3>We got married!</h3><p>The date was October 27<sup>th</sup> 2024, and we thank you for being a part of it!</p>';
+                        } else {
+                            document.getElementById('invitation-text').innerHTML = '<h3>We are getting married!</h3><p>The date is October 27<sup>th</sup> 2024, ' +
+                                'and we would love for you to be a part of it!</p>';
+                        }
+                    </script>
 
-<section id="intro">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h3 class="header">Our Story</h3>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3 hidden-sm hidden-xs"><img src="img/logo-cat-transparent.png" class="wp1"></div>
-            <div class="col-md-6">
-                <p>
-                    Stephen and Tracey met at Drexel University during Freshman Orientation Week in 2011. A month 
-                    later, after a loan of laundry detergent, a floor movie night, and a visit to the Academy of 
-                    Natural Sciences with several of Stephen's floormates, Tracey and Stephen had become fast friends. 
-                    They also quickly realized that they had grown up in neighboring school districts and had,
-                    growing up, simultaneously participated in a number of activities during which they likely crossed 
-                    paths numerous times without ever once meeting!
-                </p>
-                <p>
-                    The two remained close friends for some time before eventually realizing they were probably 
-                    dating and thus relabeled their relationship. In the time since then, they have moved to
-                    Maryland with their two cats, one of which played a significant role in Stephen's proposal to
-                    an oblivious Tracey (who took nearly a full 24 hours to notice) in November 2022. 
-                </p>
-            </div>
-            <div class="col-md-3 hidden-sm hidden-xs"><img src="img/logo-bunny-transparent.png" class="wp2"></div>
-        </div>
-        <div class="row">
-            <div class="col-sm-4 col-sm-push-2 col-xs-6 hidden-md hidden-lg"><img src="img/logo-cat-transparent.png" class="wp8"></div>
-            <div class="col-sm-4 col-sm-push-2 col-xs-6 hidden-md hidden-lg"><img src="img/logo-bunny-transparent.png" class="wp9"></div>
-        </div>
-    </div>
-</section>
+            <!-- TODO Make this clock show up properly
+            <div class="clock-container">
+                <div class="row">
+                    <div class="clock-col">
+                        <p class="clock-day clock-timer">
+                        </p>
+                        <p class="clock-label">
+                            Days
+                        </p>
+                    </div>
+                    <div class="clock-col">
+                        <p class="clock-hours clock-timer">
+                        </p>
+                        <p class="clock-label">
+                            Hours
+                        </p>
+                    </div>
+                    <div class="clock-col">
+                        <p class="clock-minutes clock-timer">
+                        </p>
+                        <p class="clock-label">
+                            Minutes
+                        </p>
+                    </div>
+                    <div class="clock-col">
+                        <p class="clock-seconds clock-timer">
+                        </p>
+                        <p class="clock-label">
+                            Seconds
+                        </p>
+                    </div>
+                </div>
+                <script>
+                    document.addEventListener('DOMContentLoaded', () =>
+                        requestAnimationFrame(updateTime)
+                    )
 
-<section class="events section-padding" id="events">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h3 class="header">Events</h3>
+                    // Set countdown date
+                    var countDownDate = new Date("Oct 27, 2024 11:00:00 GMT-05:00").getTime();
+
+                    // Set update interval to every 1 second
+                    var x = setInterval(function () {
+
+
+                    }, 1000);
+
+                    function updateTime() {
+                        // Get today's date and time
+                        var now = new Date().getTime();
+
+                        // Find the distance between now and the count down date
+                        var distance = countDownDate - now;
+
+                        if (distance < 0) {
+                            distance = now - countDownDate;
+                        }
+
+                        // Time calculations for days, hours, minutes and seconds
+                        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                        document.documentElement.style.setProperty('--timer-day', "'" + days + "'");
+
+                        if (hours > 9) {
+                            document.documentElement.style.setProperty('--timer-hours', "'" + hours + "'");
+                        } else {
+                            document.documentElement.style.setProperty('--timer-hours', "'0" + hours + "'");
+                        }
+
+                        if (minutes > 9) {
+                            document.documentElement.style.setProperty('--timer-minutes', "'" + minutes + "'");
+                        } else {
+                            document.documentElement.style.setProperty('--timer-minutes', "'0" + minutes + "'");
+                        }
+
+                        if (seconds > 9) {
+                            document.documentElement.style.setProperty('--timer-seconds', "'" + seconds + "'");
+                        } else {
+                            document.documentElement.style.setProperty('--timer-seconds', "'0" + seconds + "'");
+                        }
+
+                        requestAnimationFrame(updateTime);
+                    }
+                </script>
+            </div>-->
+        </div>
+    </section>
+
+    <section id="intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h3 class="header">Our Story</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 hidden-sm hidden-xs"><img src="img/logo-cat-transparent.png" class="wp1"></div>
+                <div class="col-md-6">
+                    <p>
+                        Stephen and Tracey met at Drexel University during Freshman Orientation Week in 2011. A month
+                        later, after a loan of laundry detergent, a floor movie night, and a visit to the Academy of
+                        Natural Sciences with several of Stephen's floormates, Tracey and Stephen had become fast
+                        friends. They also quickly realized that they had grown up in neighboring school districts and
+                        had, growing up, simultaneously participated in a number of activities during which they likely
+                        crossed paths numerous times without ever once meeting!
+                    </p>
+                    <p>
+                        The two remained close friends for some time before eventually realizing they were probably
+                        dating and thus relabeled their relationship. In the time since then, they have moved to
+                        Maryland with their two cats, one of which played a significant role in Stephen's proposal to
+                        an oblivious Tracey (who took nearly a full 24 hours to notice) in November 2022.
+                    </p>
+                </div>
+                <div class="col-md-3 hidden-sm hidden-xs"><img src="img/logo-bunny-transparent.png" class="wp2"></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 col-sm-push-2 col-xs-6 hidden-md hidden-lg"><img src="img/logo-cat-transparent.png"
+                        class="wp8"></div>
+                <div class="col-sm-4 col-sm-push-2 col-xs-6 hidden-md hidden-lg"><img
+                        src="img/logo-bunny-transparent.png" class="wp9"></div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <h5><strong>October 27</strong></h5>
-            </div>
-            <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
-                <p><strong>Appleford Estate</strong></p>
-                <div class="wp3">
-                    <h5>Ceremony and Cocktail Hour <span class="time">TBD</span></h5>
-                    <p>Please join us for our ceremony to be held on the lawn of Appleford Estate, followed by a cocktail 
-                        hour with food and games on the lawn and patio.</p>
-                    <!-- TODO Add Menu Pop Up? Maybe (Haven't determined passed hors d'oevres yet) -->
-                </div>
-                <div class="wp5">
-                    <h5>Lunch Reception <span class="time">TBD</span></h5>
-                    <p>We will be hosting a buffet lunch reception, where we hope you will eat to your heart's desire.</p>
-                    <!-- TODO Add Menu Pop Up -->
+    </section>
+
+    <section class="events section-padding" id="events">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="header">Events</h3>
                 </div>
             </div>
-            <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
-                <p><strong>JinDing Restaurant</strong></p>
-                <!-- TODO Try to fit in double happiness somewhere here?-->
-                <div class="wp4">
-                    <h5>Tea Ceremony <span class="time">TBD</span></h5>
-                    <p>This is the Chinese tea ceremony, after which the bride and groom were traditionally considered
-                        to be married by both families. In this wedding tradition, the bride and groom pay their
-                        respects to their parents, new in-laws, and family elders by serving them tea. The ceremony symbolizes
-                        the unification of both families and allows the couple the opportunity to honor those who helped raise them.
-                        The honorees often bestow blessings and offer the new couple well wishes in their new life together, 
-                        words of wisdom, or gifts. </p>
+            <div class="row">
+                <div class="col-md-12">
+                    <h5><strong>October 27</strong></h5>
                 </div>
-                <div class="wp6">
-                    <h5>Wedding Banquet <span class="time">5:30 PM - 9 PM</span></h5>
-                    <p>The traditional wedding multi-course banquet is served family style, and is the main event that occurs 
-                        after the tea ceremony!</p>
-                    <!-- TODO Add Menu Pop Up; text ready -->
+                <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
+                    <p><strong>Appleford Estate</strong></p>
+                    <div class="wp3">
+                        <h5>Ceremony and Cocktail Hour <span class="time">TBD</span></h5>
+                        <p>Please join us for our ceremony to be held on the lawn of Appleford Estate, followed by a
+                            cocktail
+                            hour with food and games on the lawn and patio.</p>
+                        <!-- TODO Add Menu Pop Up? Maybe (Haven't determined passed hors d'oevres yet) -->
+                    </div>
+                    <div class="wp5">
+                        <h5>Lunch Reception <span class="time">TBD</span></h5>
+                        <p>We will be hosting a buffet lunch reception, where we hope you will eat to your heart's
+                            desire.</p>
+                        <!-- TODO Add Menu Pop Up -->
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
+                    <p><strong>JinDing Restaurant</strong></p>
+                    <!-- TODO Try to fit in double happiness somewhere here?-->
+                    <div class="wp4">
+                        <h5>Tea Ceremony <span class="time">TBD</span></h5>
+                        <p>In this wedding tradition, the bride and groom pay their respects to their parents, new
+                            in-laws, and family elders by serving them tea. The ceremony symbolizes the unification of
+                            both families and allows the couple the opportunity to honor those who helped raise them.
+                            The honorees often bestow blessings and offer the new couple well wishes in their new life
+                            together, words of wisdom, or gifts. </p>
+                    </div>
+                    <div class="wp6">
+                        <h5>Wedding Banquet <span class="time">5:30 PM - 9 PM</span></h5>
+                        <p>The traditional wedding multi-course banquet is served family style, and is the main event
+                            that occurs after the tea ceremony.</p>
+                        <!-- TODO Add Menu Pop Up; text ready -->
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row section-padding">
-            <div class="col-md-4 col-md-offset-4 text-center">
-                <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal">
-                    <i class="fa fa-barcode"></i>&nbsp;&nbsp;Dress Code
-                </a>
+            <div class="row section-padding">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal">
+                        <i class="fa fa-barcode"></i>&nbsp;&nbsp;Dress Code
+                    </a>
+                </div>
             </div>
-        </div>
-<!-- TODO Figure out details and how to organize Brunch section and Dress Code           
+            <!-- TODO Figure out details and how to organize Brunch section and Dress Code           
         <div class="row">
             <div class="col-md-12">
                 <p><strong>October 28</strong></p>
@@ -218,476 +318,542 @@
                 </div>
             </div>
         </div>-->
-        <!--<div class="row">
+            <!--<div class="row">
             <div class="col-xs-12 section-border section-padding">
             </div>
         </div>-->
 
 
-    <div id="dc-modal" class="modal fade" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
-                    </button>
-                    <h3 class="text-center">Wedding Day Dress Code</h3>
-                    <p>Semi-formal or cocktail dress is recommended, but please use your best judge-ment with 
-                        consideration for unpredictable autumn weather. We'll update this as the forecast 
-                        becomes available. Our daytime ceremony and reception is planned for outdoors on the 
-                        beautiful lawn of Appleford, weather permitting <span>&#8212;</span> stilettos 
-                        are not recommended in that case!
+            <div id="dc-modal" class="modal fade" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <button type="button" class="close" data-dismiss="modal"
+                                aria-label="Close"><span>&times;</span>
+                            </button>
+                            <h3 class="text-center">Wedding Day Dress Code</h3>
+                            <p>Semi-formal or cocktail dress is recommended, but please use your best judge-ment with
+                                consideration for unpredictable autumn weather. We'll update this as the forecast
+                                becomes available. Our daytime ceremony and reception is planned for outdoors on the
+                                beautiful lawn of Appleford, weather permitting <span>&#8212;</span> stilettos
+                                are not recommended in that case!
+                            </p>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+    </section>
+
+    <section id="social" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h3>A picture is worth a thousand words!</h3>
+                    <p>Help us capture the moment: please tag your photos with the hashtag #ForeverYoungWithLiu on
+                        social media.
+                    </p>
+                    <!-- TODO Set up LIVESHARE -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="eng-pics" class="section-padding">
+        <div class="container-fluid">
+            <div class="row engagement_pics">
+                <div class="col-md-12 text-center">
+                    <h3 class="header">Engagement Photos</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="wide-5">
+                    <a class="fancybox" rel="group" href="img/eng_pics/509.jpg">
+                        <div class="img-wrap">
+                            <div class="overlay">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <img src="img/eng_pics/509.jpg" alt="" />
+                        </div>
+                    </a>
+                </div>
+                <div class="wide-5">
+                    <a class="fancybox" rel="group" href="img/eng_pics/530.jpg">
+                        <div class="img-wrap">
+                            <div class="overlay">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <img src="img/eng_pics/530.jpg" alt="" />
+                        </div>
+                    </a>
+                </div>
+                <div class="wide-5">
+                    <a class="fancybox" rel="group" href="img/eng_pics/713.jpg">
+                        <div class="img-wrap">
+                            <div class="overlay">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <img src="img/eng_pics/713.jpg" alt="" />
+                        </div>
+                    </a>
+                </div>
+                <div class="wide-5">
+                    <a class="fancybox" rel="group" href="img/eng_pics/1223.jpg">
+                        <div class="img-wrap">
+                            <div class="overlay">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <img src="img/eng_pics/1223.jpg" alt="" />
+                        </div>
+                    </a>
+                </div>
+                <div class="wide-5">
+                    <a class="fancybox" rel="group" href="img/eng_pics/1016.jpg">
+                        <div class="img-wrap">
+                            <div class="overlay">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <img src="img/eng_pics/1016.jpg" alt="" />
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="wide-5">
+                    <a class="fancybox" rel="group" href="img/eng_pics/60.jpg">
+                        <div class="img-wrap">
+                            <div class="overlay">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <img src="img/eng_pics/60.jpg" alt="" />
+                        </div>
+                    </a>
+                </div>
+                <div class="wide-5">
+                    <a class="fancybox" rel="group" href="img/eng_pics/1320.jpg">
+                        <div class="img-wrap">
+                            <div class="overlay">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <img src="img/eng_pics/1320.jpg" alt="" />
+                        </div>
+                    </a>
+                </div>
+                <div class="wide-5">
+                    <a class="fancybox" rel="group" href="img/eng_pics/1509.jpg">
+                        <div class="img-wrap">
+                            <div class="overlay">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <img src="img/eng_pics/1509.jpg" alt="" />
+                        </div>
+                    </a>
+                </div>
+                <div class="wide-5">
+                    <a class="fancybox" rel="group" href="img/eng_pics/1581.jpg">
+                        <div class="img-wrap">
+                            <div class="overlay">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <img src="img/eng_pics/1581.jpg" alt="" />
+                        </div>
+                    </a>
+                </div>
+                <div class="wide-5">
+                    <a class="fancybox" rel="group" href="img/eng_pics/965.jpg">
+                        <div class="img-wrap">
+                            <div class="overlay">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <img src="img/eng_pics/965.jpg" alt="" />
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row hidden-lg hidden-md hidden-xs">
+                <div class="col-xs-12 section-border section-padding"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="video-bg" class="hidden-sm hidden-xs">
+        <div id="bgndVideo" class="player"
+            data-property="{videoURL:'https://youtu.be/aRLgZkUDWYY',containment:'#video-bg',autoPlay:true, mute:true, showControls:false, startAt:15, stopAt:74, opacity:1}">
+        </div>
+        <div id="video-content">
+            <h5>Philadelphia</h5>
+            <p>City of Brotherly Love</p>
+        </div>
+    </section>
+
+    <section id="map" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h3>Local Attractions</h3>
+                    <p>Should you be visiting us from afar and have time to explore the local area, we'd love to share
+                        a few choice recommendations for your visit.
                     </p>
                 </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-</section>
-
-<section id="social" class="section-padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h3>A picture is worth a thousand words!</h3>
-                <p>Help us capture the moment: please tag your photos with the hashtag #ForeverYoungWithLiu on social media.
-                </p>
-                <!-- TODO Set up LIVESHARE -->
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="eng-pics" class="section-padding">
-    <div class="container-fluid">
-        <div class="row engagement_pics">
-            <div class="col-md-12 text-center">
-                <h3 class="header">Engagement Photos</h3>
             </div>
         </div>
         <div class="row">
-            <div class="wide-5">
-                <a class="fancybox" rel="group" href="img/eng_pics/509.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/509.jpg" alt=""/>
-                    </div>
-                </a>
-            </div>
-            <div class="wide-5">
-                <a class="fancybox" rel="group" href="img/eng_pics/530.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/530.jpg" alt=""/>
-                    </div>
-                </a>
-            </div>
-            <div class="wide-5">
-                <a class="fancybox" rel="group" href="img/eng_pics/713.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/713.jpg" alt=""/>
-                    </div>
-                </a>
-            </div>
-            <div class="wide-5">
-                <a class="fancybox" rel="group" href="img/eng_pics/1223.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/1223.jpg" alt=""/>
-                    </div>
-                </a>
-            </div>
-            <div class="wide-5">
-                <a class="fancybox" rel="group" href="img/eng_pics/1016.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/1016.jpg" alt=""/>
-                    </div>
+            <div class="col-md-4 col-md-offset-4 text-center">
+                <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#ttd-modal">
+                    <i class="fa fa-barcode"></i>&nbsp;&nbsp;Things to Do
                 </a>
             </div>
         </div>
-        <div class="row">
-            <div class="wide-5">
-                <a class="fancybox" rel="group" href="img/eng_pics/60.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/60.jpg" alt=""/>
+        <div id="ttd-modal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <!-- TODO Clean up in CSS + Add Hover(?) Color + Fix Lists -->
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
+                    </button>
+                    <div class="bar border-bottom">
+                        <button class="tablink bar-item button" onclick="openAttractions(event, 'Around Philly')">Around
+                            Philly</button>
+                        <button class="tablink bar-item button"
+                            onclick="openAttractions(event, 'Historical')">Historical</button>
+                        <button class="tablink bar-item button" onclick="openAttractions(event, 'Food & Drink')">Food &
+                            Drink</button>
                     </div>
-                </a>
-            </div>
-            <div class="wide-5">
-                <a class="fancybox" rel="group" href="img/eng_pics/1320.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/1320.jpg" alt=""/>
-                    </div>
-                </a>
-            </div>
-            <div class="wide-5">
-                <a class="fancybox" rel="group" href="img/eng_pics/1509.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/1509.jpg" alt=""/>
-                    </div>
-                </a>
-            </div>
-            <div class="wide-5">
-                <a class="fancybox" rel="group" href="img/eng_pics/1581.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/1581.jpg" alt=""/>
-                    </div>
-                </a>
-            </div>
-            <div class="wide-5">
-                <a class="fancybox" rel="group" href="img/eng_pics/965.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/965.jpg" alt=""/>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row hidden-lg hidden-md hidden-xs">
-            <div class="col-xs-12 section-border section-padding"></div>
-        </div>
-    </div>
-</section>
-
-<section id="video-bg" class="hidden-sm hidden-xs">
-    <div id="bgndVideo" class="player"
-         data-property="{videoURL:'https://youtu.be/aRLgZkUDWYY',containment:'#video-bg',autoPlay:true, mute:true, showControls:false, startAt:15, stopAt:74, opacity:1}">
-    </div>
-    <div id="video-content">
-        <h5>Philadelphia</h5>
-        <p>City of Brotherly Love</p>
-    </div>
-</section>
-
-<section id="map" class="section-padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h3>Local Attractions</h3>
-                <p>Should you be visiting us from afar and have time to explore the local area, we'd love to share 
-                    a few choice recommendations for your visit.
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-4 col-md-offset-4 text-center">
-            <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#ttd-modal">
-                <i class="fa fa-barcode"></i>&nbsp;&nbsp;Things to Do
-            </a>
-        </div>
-    </div>
-    <div id="ttd-modal" class="modal fade" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <!-- TODO Clean up in CSS + Add Hover(?) Color + Fix Lists -->
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
-                </button>
-                <div class="bar border-bottom">
-                    <button class="tablink bar-item button" onclick="openAttractions(event, 'Around Philly')">Around Philly</button>
-                    <button class="tablink bar-item button" onclick="openAttractions(event, 'Historical')">Historical</button>
-                    <button class="tablink bar-item button" onclick="openAttractions(event, 'Food & Drink')">Food & Drink</button>
-                </div>              
-                <div id="Around Philly" class="modal-body attractions">
-                    <h3>Around Philadelphia</h3>
-                    <p>Philadelphia, the City of Brotherly Love. There's always something to do around town, from Eakins Oval by the Art 
-                        Museum steps to on the streets of Chinatown and beyond. 
-                    </p>
-                    <ul>
-                        <li>Art Museum / Barnes Foundation</li>
-                        <li>Franklin Institute</li>
-                        <li>Academy of Natural Sciences</li>
-                        <li>Independence Seaport Museum</li>
-                        <li>Philadelphia Zoo / Elmwood Park Zoo</li>
-                        <li>King of Prussia Mall</li>
-                        <li>Eastern State Penitentiary</li>
-                        <li>Longwood Gardens</li>
-                        <li>Elfreth's Alley</li>
-                        <li>Sesame Place</li>
-                    </ul>
-                   </div>
-                 
-                   <div id="Historical" class="modal-body attractions">
-                    <h3>Historical</h3>
-                    <p>For the history buffs, the Philly area offers numerous locations to explore. In the Old City neighborhood,
-                        you can stroll the lawns of the Constitution Center or take a tour through the rooms of Independence Hall. 
-                        Or for a trip outside of the City, visit the fields of Valley Forge.</p>
-                    <ul>
-                        <li>National Constitution Center</li>
-                        <li>Liberty Bell</li>
-                        <li>Independence Hall</li>
-                        <li>Valley Forge National Park</li>
-                        <li>Museum of the American Revolution</li>
-                    </ul>
-                   </div>
-                 
-                   <div id="Food & Drink" class="modal-body attractions">
-                        <h3>Food & Drink</h3>
-                        <p>The streets of Philadelphia are filled with a diverse array of delicious food. Food trucks dot the
-                            street corners of Center City, and small BYOB restaurants line the streets. The legendary Reading Terminal
-                            Market is a Philly landmark.
+                    <div id="Around Philly" class="modal-body attractions">
+                        <h3>Around Philadelphia</h3>
+                        <h5>Philadelphia, the City of Brotherly Love. There's always something to do around town, from
+                            Eakins Oval by the Art Museum steps to on the streets of Chinatown and beyond.
+                        </h5>
+                        <p>
+                            Art Museum / Barnes Foundation<br />
+                            Franklin Institute<br />
+                            Academy of Natural Sciences<br />
+                            Independence Seaport Museum<br />
+                            City Hall / Dilworth Park / Love Park<br />
+                            Philadelphia Zoo / Elmwood Park Zoo<br />
+                            King of Prussia Mall<br />
+                            Eastern State Penitentiary<br />
+                            Longwood Gardens<br />
+                            Elfreth's Alley<br />
+                            Sesame Place
                         </p>
-                        <ul>
-                            <li>Reading Terminal Market</li>
-                            <li>Sabrina's Cafe</li>
-                            <li>Dalessandro's Steaks & Hoagies</li>
-                            <li>SpOt Gourmet Burgers</li>
-                            <li>Rita's Italian Ice</li>
-                            <li>Philly Pretzel Factory</li>
-                            <li>Lore's Chocolates</li>
-                            <li>Chinatown
-                                <ul>
-                                    <li>Tai Lake</li>                                    
-                                    <li>Penang Malaysian Cuisine</li>
-                                    <li>Happy Lamb Hotpot</li>
-                                    <li>Nine Ting</li>
-                                    <li>Tiger Sugar</li>
-                                </ul>
-                            </li>
-                            <li>Dim Sum
-                                <ul>
-                                    <li>Ocean Harbor</li>
-                                    <li>China Gourmet</li>
-                                </ul>
-                            </li>
-                            <li>Pizza
-                                <ul>
-                                    <li>Angelo's Pizzeria</li>
-                                    <li>Tacconelli's Pizzeria</li>
-                                </ul>
-                            </li>
-                            <li>Cheesesteaks
-                                <ul>
-                                    <li>Angelo's Pizzeria</li>
-                                    <li>John's Roast Pork</li>
-                                    <li>Jim's South Street</li>
-                                </ul>
-                            </li>
-                            <li>BBQ
-                                <ul>
-                                    <li>Zig Zag BBQ</li>
-                                    <li>Sweet Lucy's Smokehouse</li>
-                                </ul>
-                            </li>
-                            <li>Hoagies
-                                <ul>
-                                    <li>PrimoHoagies</li>
-                                    <li>Wawa</li>
-                                </ul>
-                            </li>
-                            <li>Noodles
-                                <ul>
-                                    <li>Terakawa Ramen</li>
-                                    <li>Hajimaru Ramen</li>
-                                    <li>Pho Ha Saigon</li>
-                                    <li>Pho Today</li>
-                                </ul>
-                            </li>
-                            <li>Korean
-                                <ul>
-                                    <li>Cafe Soho</li>
-                                    <li>DuBu</li>
-                                    <li>Surah</li>
-                                </ul>
-                            </li>
-                        </ul>
-                   </div>
+                    </div>
 
-                   <!-- TODO Figure out how to make this script work in the scripts.js file-->
-                   <script>
+                    <div id="Historical" class="modal-body attractions">
+                        <h3>Historical</h3>
+                        <h5>For the history buffs, the Philly area offers numerous locations to explore. In the Old City
+                            neighborhood, you can stroll the lawns of the Constitution Center or take a tour through the
+                            rooms of Independence Hall. Or for a trip outside of the City, you can visit the fields of
+                            Valley Forge.</h5>
+                        <p>
+                            National Constitution Center<br />
+                            Liberty Bell<br />
+                            Independence Hall<br />
+                            Valley Forge National Park<br />
+                            Museum of the American Revolution<br />
+                            </ul>
+                    </div>
+
+                    <div id="Food & Drink" class="modal-body attractions">
+                        <h3>Food & Drink</h3>
+                        <h5>The streets of Philadelphia are filled with a diverse array of delicious, world-class food.
+                            Food trucks dot the street corners of Center City and small BYOB restaurants line
+                            neighborhood streets, while Reading Terminal Market stands as a beloved Philly landmark.
+                            Local distilleries and craft food alongside colorful ethnic foods have shaped the city's
+                            gourmet landscape.
+                        </h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul>
+                                    <li>Reading Terminal Market</li>
+                                    <li>Sabrina's Cafe</li>
+                                    <li>Philly Pretzel Factory</li>
+                                    <li>Pizza
+                                        <ul>
+                                            <li>Angelo's Pizzeria</li>
+                                            <li>Tacconelli's Pizzeria</li>
+                                        </ul>
+                                    </li>
+                                    <li>Cheesesteaks, Burgers, and Hoagies
+                                        <ul>
+                                            <li>Angelo's Pizzeria</li>
+                                            <li>John's Roast Pork</li>
+                                            <li>Jim's South Street</li>
+                                            <li>SpOt Gourmet Burgers</li>
+                                            <li>PrimoHoagies</li>
+                                        </ul>
+                                    </li>
+                                    <li>Barbeque
+                                        <ul>
+                                            <li>Zig Zag BBQ</li>
+                                            <li>Sweet Lucy's Smokehouse</li>
+                                        </ul>
+                                    </li>
+                                    <li>Sweet Eats
+                                        <ul>
+                                            <li>Rita's Italian Ice</li>
+                                            <li>Lore's Chocolates</li>
+                                            <li>Franklin Fountain</li>
+                                            <li>Zwahlen's Ice Cream & Chocolate</li>
+                                            <li>Tous les Jours</li>
+                                            <li>A La Mousse</li>
+                                            <li>Delice et Chocolat</li>
+                                        </ul>
+                                    </li>
+                            </div>
+                            <div class="col-md-6">
+                                <ul>
+                                    <li>Chinatown
+                                        <ul>
+                                            <li>Tai Lake</li>
+                                            <li>Penang Malaysian Cuisine</li>
+                                            <li>Happy Lamb Hotpot</li>
+                                            <li>Nine Ting</li>
+                                            <li>Tiger Sugar</li>
+                                        </ul>
+                                    </li>
+                                    <li>Dim Sum
+                                        <ul>
+                                            <li>Ocean Harbor</li>
+                                            <li>China Gourmet</li>
+                                        </ul>
+                                    </li>
+                                    <li>Noodles
+                                        <ul>
+                                            <li>Terakawa Ramen</li>
+                                            <li>Hajimaru Ramen</li>
+                                            <li>Pho Ha Saigon</li>
+                                            <li>Pho Today</li>
+                                        </ul>
+                                    </li>
+                                    <li>Korean
+                                        <ul>
+                                            <li>Cafe Soho</li>
+                                            <li>DuBu</li>
+                                            <li>Surah</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TODO Figure out how to make this script work in the scripts.js file-->
+                    <script>
                         document.getElementsByClassName("tablink")[0].click();
 
                         function openAttractions(evt, tabname) {
                             var i, x, tablinks;
                             x = document.getElementsByClassName("attractions");
                             for (i = 0; i < x.length; i++) {
-                            x[i].style.display = "none";
+                                x[i].style.display = "none";
                             }
                             tablinks = document.getElementsByClassName("tablink");
                             for (i = 0; i < x.length; i++) {
-                            tablinks[i].classList.remove("light-grey");
+                                tablinks[i].classList.remove("light-grey");
                             }
                             document.getElementById(tabname).style.display = "block";
                             evt.currentTarget.classList.add("light-grey");
                         }
                     </script>
-                 
-                   <!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div>
-</section>
 
-<section id="map" class="section-padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h3>How do I get there?</h3>
-                <p>For guests who plan to drive to our event, please note that the directions provided by Google Maps for "Appleford" end 
-                    at the driveway entrance of the estate.<br/>We recommend using the links below for navigation.
-                </p>
+                    <!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
             </div>
-        </div>
-    </div>
-    <div>
-        <div id="map-canvas"></div>
-    </div>
-    <div id="map-content-wrapper" class="container pointer-events-none">
-        <div class="row">
-            <div class="col-xs-offset-1 col-xs-10 col-md-offset-3 col-md-6">
-                <div class="text-center">
-                    <div id="btn-show-content" class="toggle-map-content pointer-events-auto">
-                        <i class="fa fa-info-circle"></i>&nbsp;&nbsp; Show info
-                    </div>
-                </div>
-                <div id="map-content" class="pointer-events-auto">
-                    <div class="row">
-                        <div class="col-md-6 text-center">
-                            <h5 class="map-title">Ceremony</h5>
-                            <h5>Appleford Estate</h5>
-                            <p class="address"><a href="https://maps.app.goo.gl/3yLSmsPSvPXbkLCSA">770 Mt Moro Road<br/>
-                                Villanova, PA 19085</a></p>
-                        </div>
-                        <div class="col-md-6 text-center">
-                            <h5 class="map-title">Banquet</h5>
-                            <h5>JinDing Restaurant</h5>
-                            <p class="address"><a href="https://maps.app.goo.gl/aLe1jHeDFfVorXTR9">1051 Conestoga Road<br/>
-                                Bryn Mawr, PA 19010</a></p>
-                        </div>
-                    </div>
-                    <div class="row text-center">
-                        <div class="col-md-12" style="padding: 5px;">
-                            <a class="btn btn-accent btn-small" id="btn-show-map"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Show
-                                map</a>
-                        </div>
-                    </div>
+    </section>
+
+    <section id="map" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h3>How do I get there?</h3>
+                    <p>For guests who plan to drive to our event, please note that the directions provided by Google
+                        Maps for "Appleford" end at the driveway entrance of the estate.<br />We recommend using the
+                        links below for navigation.
+                    </p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+        <div>
+            <div id="map-canvas"></div>
+        </div>
+        <div id="map-content-wrapper" class="container pointer-events-none">
+            <div class="row">
+                <div class="col-xs-offset-1 col-xs-10 col-md-offset-3 col-md-6">
+                    <div class="text-center">
+                        <div id="btn-show-content" class="toggle-map-content pointer-events-auto">
+                            <i class="fa fa-info-circle"></i>&nbsp;&nbsp; Show info
+                        </div>
+                    </div>
+                    <div id="map-content" class="pointer-events-auto">
+                        <div class="row">
+                            <div class="col-md-6 text-center">
+                                <h5 class="map-title">Ceremony</h5>
+                                <h5>Appleford Estate</h5>
+                                <p class="address"><a href="https://maps.app.goo.gl/3yLSmsPSvPXbkLCSA">770 Mt Moro
+                                        Road<br />
+                                        Villanova, PA 19085</a></p>
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <h5 class="map-title">Banquet</h5>
+                                <h5>JinDing Restaurant</h5>
+                                <p class="address"><a href="https://maps.app.goo.gl/aLe1jHeDFfVorXTR9">1051 Conestoga
+                                        Road<br />
+                                        Bryn Mawr, PA 19010</a></p>
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <div class="col-md-12" style="padding: 5px;">
+                                <a class="btn btn-accent btn-small" id="btn-show-map"><i
+                                        class="fa fa-map-marker"></i>&nbsp;&nbsp;Show
+                                    map</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- TODO Add Transportation (Shuttle, Airport, SEPTA?) and Accomodations Information; only have some of this info currently,
+    <!-- TODO Add Transportation (Shuttle, Airport, SEPTA?) and Accomodations Information; only have some of this info currently,
     will have to be partial setup and updated later-->
 
-<section class="rsvp text-center" id="rsvp">
+    <section class="rsvp text-center" id="rsvp">
 
-    <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
-                    </button>
-                    <div class="section-padding">
-                        <h3>Thank you!</h3>
-                        <p>We are glad to see you join us on our big day.</p>
-                        <div id="add-to-cal"></div>
+        <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
+                        </button>
+                        <div class="section-padding">
+                            <h3>Thank you!</h3>
+                            <p>We are glad to see you join us on our big day.</p>
+                            <div id="add-to-cal"></div>
+                        </div>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <h3>What are you waiting for?</h3>
+                    <p>We would greatly appreciate if you could RSVP by September 15, 2024!</p>
+                    <form id="rsvp-form" class="rsvp-form" action="" method="POST">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-input-group">
+                                    <i class="fa fa-envelope"></i><input type="email" name="email" class=""
+                                        placeholder="Your E-mail" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-input-group">
+                                    <i class="fa fa-user"></i><input name="name" class="" placeholder="Your Name"
+                                        required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-input-group">
+                                    <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0"
+                                        max="4" placeholder="Partner and/or Children" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-input-group">
+                                    <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
+                                        class="" min="0" placeholder="Invite Code" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12" id="alert-wrapper"></div>
+                        </div>
+                        <button class="btn-fill rsvp-btn">
+                            Yes,
+                            that's me!
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="row section-padding">
+                        <div class="col-md-4 col-md-offset-4 text-center">
+                            <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#faq-modal">
+                                <i class="fa fa-barcode"></i>&nbsp;&nbsp;Any Other Questions?
+                            </a>
+                        </div>
+                    </div>
+                    <div id="faq-modal" class="modal fade" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <button type="button" class="close" data-dismiss="modal"
+                                        aria-label="Close"><span>&times;</span>
+                                    </button>
+                                    <h3 class="text-center">FAQ</h3>
+                                    <!--TODO Left Align this text-->
+                                    <h5>Will there be parking available at the wedding venues?</h5>
+                                    <p>There will be shuttle service between the venues and hotels. For those
+                                        of you that are local, both venues have parking available.<br />Appleford's
+                                        disability parking is available at the right fork along the drive,
+                                        whereas general guest parking is available along the left fork.</p>
+                                    <h5>Will there be an open bar?</h5>
+                                    <p>Yes, so please drink and drive responsibly, or plan to take advantage of the
+                                        hotel room blocks and shuttle service.</p>
+                                    <h5>Do you have a registry? Should we bring/send wedding gifts?</h5>
+                                    <p>Your presence at our wedding is the best present you can bring us, and we
+                                        kindly request no gifts. We will, of course, appreciate cards and will have
+                                        a card box and guest books at both venues set up.</p>
+                                    <h5>What should I do in case of illness?</h5>
+                                    <p>While we would love for you to attend our wedding, we request that if you
+                                        are feeling unwell, please stay home and take care of yourself. </p>
+                                    <h5>Will you be live streaming the event?</h5>
+                                    <p>Unfortunately, we will not the live streaming the events.</p>
+                                    <h5>Where will wedding updates be posted?</h5>
+                                    <p>Please check this website for any updates as needed. If you confirm your
+                                        contact information in your RSVP, we will also send out emails to those
+                                        whose email contact information we have on file.</p>
+                                    <h5>If I have any other questions about the wedding, who should I contact?</h5>
+                                    <p>Please contact Tracey or Stephen directly.</p>
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
                     </div>
                 </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <h3>What are you waiting for?</h3>
-                <p>We would greatly appreciate if you could RSVP by September 15, 2024!</p>
-                <form id="rsvp-form" class="rsvp-form"
-                      action=""
-                      method="POST">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-envelope"></i><input type="email" name="email" class=""
-                                                                     placeholder="Your E-mail"
-                                                                     required>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-user"></i><input name="name" class=""
-                                                                 placeholder="Your Name"
-                                                                 required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0"
-                                                                  max="4"
-                                                                  placeholder="Spouse and/or Children"
-                                                                  required>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
-                                                                class="" min="0"
-                                                                placeholder="Invite Code"
-                                                                required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12" id="alert-wrapper"></div>
-                    </div>
-                    <button class="btn-fill rsvp-btn">
-                        Yes,
-                        that's me!
-                    </button>
-                </form>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- TODO FAQ Section -->
-
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 text-center content">
-                <span class="to-top-wrapper"><a href="#top" class="to-top"><i class="fa fa-angle-up"></i></a></span>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center content">
+                    <span class="to-top-wrapper"><a href="#top" class="to-top"><i class="fa fa-angle-up"></i></a></span>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
-<script src="js/vendor/jquery-1.11.2.min.js" onerror="loadJsFromCDN('jquery.js')"></script>
-<script src="node_modules/waypoints/lib/jquery.waypoints.min.js" onerror="loadJsFromCDN('waypoints.js')"></script>
-<script src="js/jquery.fancybox.pack.js"></script>
-<script src="js/vendor/bootstrap.min.js"></script>
-<script src="js/jquery.flexslider-min.js"></script>
-<script src="js/jquery.mb.YTPlayer.min.js"></script>
-<script src="js/vendor/ouical.js"></script>
-<script src="js/scripts.min.js"></script>
-<script async defer
+    </footer>
+    <script src="js/vendor/jquery-1.11.2.min.js" onerror="loadJsFromCDN('jquery.js')"></script>
+    <script src="node_modules/waypoints/lib/jquery.waypoints.min.js" onerror="loadJsFromCDN('waypoints.js')"></script>
+    <script src="js/jquery.fancybox.pack.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script src="js/jquery.mb.YTPlayer.min.js"></script>
+    <script src="js/vendor/ouical.js"></script>
+    <script src="js/scripts.min.js"></script>
+    <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQ58uvFy75zthw-cK3iQaTKhhCkmqn-e8&callback=initMap"></script>
 </body>
+
 </html>
