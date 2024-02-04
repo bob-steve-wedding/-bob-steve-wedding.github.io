@@ -553,6 +553,7 @@ Features-stack
   }
   .rightcol {
     padding-left: 100px;
+    border-left: solid 1px $keyline-color;
   }
 
   .time {
@@ -773,9 +774,6 @@ Google map
 /* ==========================================================================
 RSVP form
 ========================================================================== */
-.shift-up {
-  margin-top: -25%;
-}
 .rsvp {
   padding-bottom: 140px;
   .rsvp-form {
