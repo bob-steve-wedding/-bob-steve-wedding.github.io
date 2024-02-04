@@ -215,7 +215,7 @@ $(document).ready(function () {
 
 // Google map
 function initMap() {
-    var ceremonyLocation = {lat: 40.05277676277598, lng: -75.32337245210972};
+    var ceremonyLocation = {lat: 40.053529, lng: -75.325912};
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 12,
         center: ceremonyLocation,

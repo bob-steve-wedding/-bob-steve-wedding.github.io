@@ -222,3 +222,11 @@ td,
 th {
 	padding: 0
 }
+
+p.address {
+	line-height: 1.25;
+}
+
+h5.map-title {
+	font-weight: 700;
+}
