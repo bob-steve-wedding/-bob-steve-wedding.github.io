@@ -7,8 +7,8 @@
 <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html class="no-js" lang="en"> <!--<![endif]-->
-<!-- TODO Update colors to wedding theme colors (mind visibility) -->
 
+<!-- TODO Update colors to wedding theme colors (mind visibility) -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -60,6 +60,62 @@
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css"
         onerror="loadCssFromCDN('font-awesome.css')">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+    <!-- TODO Clean up in CSS + Add Hover(?) Color/Highlight of Selected Tab + Make First Tab Show Up By Default -->
+    <style>
+        .attractions {
+            display: none
+        }
+
+        .bar {
+            width: 100%;
+            overflow: hidden
+        }
+
+        .center .bar {
+            display: inline-block;
+            width: auto
+        }
+
+        .bar .bar-item {
+            padding: 8px 16px;
+            float: left;
+            width: auto;
+            border: none;
+            display: block;
+            outline: 0
+        }
+
+        .bar .dropdown-hover,
+        .bar .dropdown-click {
+            position: static;
+            float: left
+        }
+
+        .bar .button {
+            white-space: normal
+        }
+
+        .bar-block .bar-item {
+            width: 100%;
+            display: block;
+            padding: 8px 16px;
+            text-align: left;
+            border: none;
+            white-space: normal;
+            float: none;
+            outline: 0
+        }
+
+        .bar-block.center .bar-item {
+            text-align: center
+        }
+
+        .block {
+            display: block;
+            width: 100%
+        }
+    </style>
 </head>
 
 <body id="top">
@@ -79,14 +135,15 @@
                                 <li><a href="#events">Events</a></li>
                                 <li><a href="#social">Social Media</a></li>
                                 <li><a href="#eng-pics">Engagement</a></li>
-                                <li class="hidden-sm hidden-xs"><a href="#video-bg">Glimpse of the city</a></li>
+                                <li class="hidden-sm hidden-xs"><a href="#video-bg">Glimpse of the City</a></li>
+                                <li><a href="#travel-info">Travel Info</a></li>
                                 <li><a href="#faq">FAQ</a></li>
                             </ul>
                             <ul class="member-actions">
-                                <!--TODO Venue doesn't seem to go to the right place on the page. Need to fix -->
+                                <!--TODO Fix clipping on smaller screens. -->
                                 <li><a href="#map" class="login">Venue</a></li>
                                 <li><a href="#rsvp" class="btn-white btn-small">RSVP</a></li>
-                                
+
                             </ul>
                         </nav>
                     </div>
@@ -114,17 +171,19 @@
         <div class="container">
             <div class="row">
                 <div id="invitation-text" class="col-md-12 text-center">
+                    <!--TODO Make script work in scripts file?-->
                     <script>
                         if (new Date() > new Date("Oct 27, 2024 11:00:00 GMT-05:00")) {
-                            document.getElementById('invitation-text').innerHTML = '<h3>We got married!</h3><p>The date was October 27<sup>th</sup> 2024, and we thank you for being a part of it!</p>';
+                            document.getElementById('invitation-text').innerHTML = '<h3>We got married!</h3><p>The date was <strong>October 27<sup>th</sup> 2024</strong>, and we thank you for being a part of it!</p><h3>Here\'s how long we\'ve been married:</h3>';
                         } else {
-                            document.getElementById('invitation-text').innerHTML = '<h3>We are getting married!</h3><p>The date is October 27<sup>th</sup> 2024, ' +
-                                'and we would love for you to be a part of it!</p>';
+                            document.getElementById('invitation-text').innerHTML = '<h3>We are getting married!</h3><p>The date is <strong>October 27<sup>th</sup> 2024</strong>, ' +
+                                'and we would love for you to be a part of it!</p><h3>Here\'s the Countdown:</h3>';
                         }
                     </script>
 
                 </div>
             </div>
+            <!--TODO Investigate formatting for mobile-->
             <div id="weddingStart" class="clock flipdown"></div>
     </section>
 
@@ -164,6 +223,7 @@
         </div>
     </section>
 
+    <!--TODO add in background images-->
     <section class="events section-padding" id="events">
         <div class="container">
             <div class="row">
@@ -182,18 +242,34 @@
                         <p>Please join us for our ceremony to be held on the lawn of Appleford Estate, followed by a
                             cocktail
                             hour with food and games on the lawn and patio.</p>
-                        <!-- TODO Add Menu Pop Up? Maybe (Haven't determined passed hors d'oevres yet) -->
                     </div>
+                    <!--TODO Figure out how to make Lunch Reception & Banquet line up without messing with small screen display-->
                     <div class="wp5">
                         <h5>Lunch Reception <span class="time">TBD</span></h5>
                         <p>We will be hosting a buffet lunch reception, where we hope you will eat to your heart's
                             desire.</p>
-                        <!-- TODO Add Menu Pop Up -->
                     </div>
+                    <div class="row text-center">
+                        <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#lrm-modal">
+                            <i class="fa fa-barcode"></i>&nbsp;&nbsp;Reception Menu
+                        </a>
+                    </div>
+                    <div id="lrm-modal" class="modal fade" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
+                                    </button>
+                                    <h3 class="text-center">Lunch Reception Menu</h3>
+                                    <p>TBD
+                                    </p>
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
                 </div>
                 <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
                     <p><strong>JinDing Restaurant</strong></p>
-                    <!-- TODO Try to fit in double happiness somewhere here?-->
                     <div class="wp4">
                         <h5>Tea Ceremony <span class="time">TBD</span></h5>
                         <p>In this wedding tradition, the bride and groom pay their respects to their parents, new
@@ -203,58 +279,160 @@
                             together, words of wisdom, or gifts. </p>
                     </div>
                     <div class="wp6">
-                        <h5>Wedding Banquet <span class="time">5:30 PM - 9 PM</span></h5>
+                        <h5>Wedding Banquet <span class="time">TBD - 9 PM</span></h5>
                         <p>The traditional wedding multi-course banquet is served family style, and is the main event
                             that occurs after the tea ceremony.</p>
-                        <!-- TODO Add Menu Pop Up; text ready -->
                     </div>
+                    <div class="row text-center">
+                        <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#bqm-modal">
+                            <i class="fa fa-barcode"></i>&nbsp;&nbsp;Banquet Menu
+                        </a>
+                    </div>
+                    <div id="bqm-modal" class="modal fade" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <button type="button" class="close" data-dismiss="modal"
+                                        aria-label="Close"><span>&times;</span>
+                                    </button>
+                                    <div class="bar border-bottom">
+                                        <button class="tablink bar-item button"
+                                            onclick="openBanquetMenu(event, 'Regular Menu')">Regular
+                                            Menu</button>
+                                        <button class="tablink bar-item button"
+                                            onclick="openBanquetMenu(event, 'Vegetarian Menu')">Vegetarian
+                                            Menu</button>
+                                    </div>
+                                    <!--TODO Make menus more readable-->
+                                    <div id="Regular Menu" class="modal-body bqm">
+                                        <h3>Regular Menu</h3>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <h5>Seafood & Fish Maw Soup 海鲜鱼肚羹<br />
+                                                    Combo Platter 六褔拼盘<br />
+                                                    <span style="padding-left:2em">Jellyfish 海蜇丝<br /></span>
+                                                    <span style="padding-left:2em">Pork Hock 煄蹄<br /></span>
+                                                    <span style="padding-left:2em"></span>Sliced Cured Beef
+                                                    牛展<br /></span>
+                                                    <span style="padding-left:2em"></span>Baby Cuttlefish
+                                                    墨鱼仔<br /></span>
+                                                    <span style="padding-left:2em"></span>Noodlefish with Salt & Pepper
+                                                    椒盐白饭鱼<br /></span>
+                                                    <span style="padding-left:2em"></span>Roasted Pork 烧肉<br /></span>
+                                                    Peking Duck with Buns 北京片皮鸭<br />
+                                                    Honey Walnut Shrimp 沙汁核桃虾<br />
+                                                    Sweet and Sour Pork 京都骨<br />
+                                                    King Oyster Mushrooms Sautéed with Tender Beef 皇子菇炒牛柳<br />
+                                                    Twin Lobsters with Ginger & Scallion 薑䓤双龙<br />
+                                                    Crispy Fried Chicken 当红炸子鸡<br />
+                                                    Steamed Fresh Fish 清蒸海上鲜<br />
+                                                    Snow Pea Leaves in Broth 上汤豆苗<br />
+                                                    E-Fu Noodles in Abalone Sauce 鲍汁菲王干烧伊面<br />
+                                                    House Fried Rice 扬州炒饭
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="Vegetarian Menu" class="modal-body bqm">
+                                        <h3>Vegetarian Menu</h3>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <h5>Corn Egg Drop Soup 玉米羹蓉<br />
+                                                    Vegetarian "Combo" Platter<br />
+                                                    Pan Fried Vegetable Dumplings 煎菜饺<br />
+                                                    Vegetable Spring Rolls 上海卷<br />
+                                                    Salt & Pepper Shredded Taro 椒盐芋丝<br />
+                                                    Pumpkin with Egg Yolk Sauce 黄金酱南瓜<br />
+                                                    Eggplant with Mixed Mushrooms 四菇扒茄子<br />
+                                                    Fried Vermicelli 炒粉丝<br />
+                                                    Stir-Fried Mixed Vegetables 炒杂菜<br />
+                                                    <span style="padding-left:2em"></span>Water Chestnut 马碲<br /></span>
+                                                    <span style="padding-left:2em"></span>Lotus Root 莲藕<br /></span>
+                                                    <span style="padding-left:2em"></span>Carrot 红萝卜<br /></span>
+                                                    <span style="padding-left:2em"></span>Celery 芹菜<br /></span>
+                                                    <span style="padding-left:2em"></span>Wood Ear 木茸<br /></span>
+                                                    Buddha's Delight 法海蒲团<br />
+                                                    <span style="padding-left:2em"></span>Gai Lan (Chinese Broccoli)
+                                                    芥兰<br /></span>
+                                                    <span style="padding-left:2em"></span>Bean Curd Sticks
+                                                    支竹<br /></span>
+                                                    <span style="padding-left:2em"></span>Chinese Black Mushroom
+                                                    杂菇<br /></span>
+                                                    General Tso's Mock Chicken 左宗棠斋鸡<br />
+                                                    Snow Pea Leaves in Broth 上汤豆苗<br />
+                                                    E-Fu Noodles in Mock Abalone Sauce 九王干烧伊面<br />
+                                                    Vegetable Fried Rice 菜炒饭<br />
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- TODO Figure out how to make this script work scripts file?-->
+                                <script>
+                                    document.getElementsByClassName("tablink")[0].click();
+
+                                    function openBanquetMenu(evt, tabname) {
+                                        var i, x, tablinks;
+                                        x = document.getElementsByClassName("bqm");
+                                        for (i = 0; i < x.length; i++) {
+                                            x[i].style.display = "none";
+                                        }
+                                        tablinks = document.getElementsByClassName("tablink");
+                                        for (i = 0; i < x.length; i++) {
+                                            tablinks[i].classList.remove("light-grey");
+                                        }
+                                        document.getElementById(tabname).style.display = "block";
+                                        evt.currentTarget.classList.add("light-grey");
+                                    }
+                                </script>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
                 </div>
             </div>
-            <div class="row section-padding">
-                <div class="col-md-4 col-md-offset-4 text-center">
-                    <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal">
-                        <i class="fa fa-barcode"></i>&nbsp;&nbsp;Dress Code
-                    </a>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h5><strong>October 28</strong></h5>
                 </div>
-            </div>
-            <!-- TODO Figure out details and how to organize Brunch section and Dress Code           
-        <div class="row">
-            <div class="col-md-12">
-                <p><strong>October 28</strong></p>
-            </div>
-            <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
-                <div class="wp3">
-                    <h5>Brunch <span class="time">TBD</span></h5>
-                        <p>For those who are from out of town (or just want to hang out), we will be holding a brunch 
+                <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
+                    <p><strong>Location Pending</strong></p>
+                    <div class="wp3">
+                        <h5>Brunch <span class="time">TBD</span></h5>
+                        <p>For those who are from out of town (or just want to hang out), we will be holding a brunch
                             the morning after our wedding. We hope to see you there!</p>
                     </div>
                 </div>
             </div>
-        </div>-->
-            <!--<div class="row">
-            <div class="col-xs-12 section-border section-padding">
+        </div>
+
+        <div class="row section-padding">
+            <div class="col-md-4 col-md-offset-4 text-center">
+                <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal">
+                    <i class="fa fa-barcode"></i>&nbsp;&nbsp;Dress Code
+                </a>
             </div>
-        </div>-->
-
-
-            <div id="dc-modal" class="modal fade" tabindex="-1" role="dialog">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            <button type="button" class="close" data-dismiss="modal"
-                                aria-label="Close"><span>&times;</span>
-                            </button>
-                            <h3 class="text-center">Wedding Day Dress Code</h3>
-                            <p>Semi-formal or cocktail dress is recommended, but please use your best judge-ment with
-                                consideration for unpredictable autumn weather. We'll update this as the forecast
-                                becomes available. Our daytime ceremony and reception is planned for outdoors on the
-                                beautiful lawn of Appleford, weather permitting <span>&#8212;</span> stilettos
-                                are not recommended in that case!
-                            </p>
-                        </div>
-                    </div><!-- /.modal-content -->
-                </div><!-- /.modal-dialog -->
-            </div><!-- /.modal -->
+        </div>
+        <div id="dc-modal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
+                        </button>
+                        <h3 class="text-center">Dress Codes</h3>
+                        <h5>Wedding Day</h5>
+                        <p>Semi-formal or cocktail dress is recommended, but please use your best judge-ment with
+                            consideration for unpredictable autumn weather. We'll update this as the forecast
+                            becomes available. Our daytime ceremony and reception is planned for outdoors on the
+                            beautiful lawn of Appleford, weather permitting <span>&#8212;</span> stilettos
+                            are not recommended in that case!
+                        </p>
+                        <h5>Day-After Brunch</h5>
+                        <p>Please feel free to relax in casual dress as you join us for our morning-after brunch!</p>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
     </section>
 
     <section id="social" class="section-padding">
@@ -262,7 +440,7 @@
             <div class="row">
                 <div class="col-md-12 text-center">
                     <h3>A picture is worth a thousand words!</h3>
-                    <p>Help us capture the moment: please tag your photos with the hashtag #ForeverYoungWithLiu on
+                    <p>Help us capture the moment: please tag your photos with the hashtag <strong>#ForeverYoungWithLiu</strong> on
                         social media.
                     </p>
                     <!-- TODO Set up LIVESHARE -->
@@ -271,6 +449,7 @@
         </div>
     </section>
 
+    <!--TODO Look into making this a gallery instead-->
     <section id="eng-pics" class="section-padding">
         <div class="container-fluid">
             <div class="row engagement_pics">
@@ -400,179 +579,199 @@
         </div>
     </section>
 
-    <section id="map" class="section-padding">
+    <section id="travel-info" class="events section-padding">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 text-center">
-                    <h3>Local Attractions</h3>
-                    <p>Should you be visiting us from afar and have time to explore the local area, we'd love to share
-                        a few choice recommendations for your visit.
-                    </p>
+                <div class="col-md-12 text-center section-padding">
+                    <h3>I'm From Out of Town. Where Can I Stay?</h3>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4 col-md-offset-4 text-center">
-                <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#ttd-modal">
-                    <i class="fa fa-barcode"></i>&nbsp;&nbsp;Things to Do
-                </a>
-            </div>
-        </div>
-        <div id="ttd-modal" class="modal fade" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <!-- TODO Clean up in CSS + Add Hover(?) Color + Fix Lists -->
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
-                    </button>
-                    <div class="bar border-bottom">
-                        <button class="tablink bar-item button" onclick="openAttractions(event, 'Around Philly')">Around
-                            Philly</button>
-                        <button class="tablink bar-item button"
-                            onclick="openAttractions(event, 'Historical')">Historical</button>
-                        <button class="tablink bar-item button" onclick="openAttractions(event, 'Food & Drink')">Food &
-                            Drink</button>
+                <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
+                    <h5><strong>Accomodations</strong></h5>
+                    <div class="wp3">
+                        <h5>Room Blocks</h5>
+                        <p>We have two room blocks available at <a
+                                href="https://www.hilton.com/en/book/reservation/deeplink/?ctyhocn=PHLCOUP&groupCode=YLW&arrivaldate=2024-10-26&departuredate=2024-10-28&cid=OM,WW,HILTONLINK,EN,DirectLink&fromId=HILTONLINKDIRECT">Hotel
+                                West & Main Conshohocken</a> and Marriott West Conshohocken (pending).<br />For
+                            anyone who may like to call in to reserve their rooms with us, they can mention the
+                            group code "YLW" or the group name "Young-Liu Wedding"<br />The last day to reserve a room
+                            within the block will be <strong>Saturday October 5th, 2024.</strong></p>
                     </div>
-                    <div id="Around Philly" class="modal-body attractions">
-                        <h3>Around Philadelphia</h3>
-                        <h5>Philadelphia, the City of Brotherly Love. There's always something to do around town, from
-                            Eakins Oval by the Art Museum steps to on the streets of Chinatown and beyond.
-                        </h5>
-                        <p>
-                            Art Museum / Barnes Foundation<br />
-                            Franklin Institute<br />
-                            Academy of Natural Sciences<br />
-                            Independence Seaport Museum<br />
-                            City Hall / Dilworth Park / Love Park<br />
-                            Philadelphia Zoo / Elmwood Park Zoo<br />
-                            King of Prussia Mall<br />
-                            Eastern State Penitentiary<br />
-                            Longwood Gardens<br />
-                            Elfreth's Alley<br />
-                            Sesame Place
+                    <div class="wp5">
+                        <h5>Other Hotels</h5>
+                        <p>As for other hotels nearby, there is also a Residence Inn located in Conshohocken.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
+                    <h5><strong>Transportation</strong></h5>
+                    <div class="wp4">
+                        <h5>Shuttle Service</h5>
+                        <p>Shuttle service will be provided between the hotels and venues. Schedule pending.</p>
+                    </div>
+                    <div class="wp6">
+                        <h5>Airport</h5>
+                        <p>The closest airport is the Philadelphia International Airport (PHL), which is a half
+                            hour drive from our venue.</p>
+                    </div>
+                    <div class="wp8">
+                        <h5>Public Transit</h5>
+                        <p>The closest SEPTA Regional Rail station is the Conshohocken station, which is 5 minute walk
+                            from the West & Main Hotel Conshohocken, from which you can catch the shuttle to our venue.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h3>Local Attractions</h3>
+                        <p>Should you be visiting us from afar and have time to explore the local area, we'd love to
+                            share
+                            a few choice recommendations for your visit.
                         </p>
                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#ttd-modal">
+                        <i class="fa fa-barcode"></i>&nbsp;&nbsp;Things to Do
+                    </a>
+                </div>
+            </div>
+            <div id="ttd-modal" class="modal fade" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <button type="button" class="close" data-dismiss="modal"
+                                aria-label="Close"><span>&times;</span>
+                            </button>
+                        </div>
+                        <div class="bar border-bottom">
+                            <button class="tablink bar-item button"
+                                onclick="openAttractions(event, 'Around Philly')">Around
+                                Philly</button>
+                            <button class="tablink bar-item button"
+                                onclick="openAttractions(event, 'Historical')">Historical</button>
+                            <button class="tablink bar-item button"
+                                onclick="openAttractions(event, 'Food & Drink')">Food &
+                                Drink</button>
+                        </div>
+                        <div id="Around Philly" class="modal-body attractions">
+                            <h3>Around Philadelphia</h3>
+                            <h5>Philadelphia, the City of Brotherly Love. There's always something to do around town,
+                                from
+                                Eakins Oval by the Art Museum steps to on the streets of Chinatown and beyond.
+                            </h5>
+                            <p>
+                                Art Museum / Barnes Foundation<br />
+                                Franklin Institute<br />
+                                Academy of Natural Sciences<br />
+                                Independence Seaport Museum<br />
+                                City Hall / Dilworth Park / Love Park<br />
+                                Philadelphia Zoo / Elmwood Park Zoo<br />
+                                King of Prussia Mall<br />
+                                Eastern State Penitentiary<br />
+                                Longwood Gardens<br />
+                                Elfreth's Alley<br />
+                                Sesame Place
+                            </p>
+                        </div>
 
-                    <div id="Historical" class="modal-body attractions">
-                        <h3>Historical</h3>
-                        <h5>For the history buffs, the Philly area offers numerous locations to explore. In the Old City
-                            neighborhood, you can stroll the lawns of the Constitution Center or take a tour through the
-                            rooms of Independence Hall. Or for a trip outside of the City, you can visit the fields of
-                            Valley Forge.</h5>
-                        <p>
-                            National Constitution Center<br />
-                            Liberty Bell<br />
-                            Independence Hall<br />
-                            Valley Forge National Park<br />
-                            Museum of the American Revolution<br />
-                            </ul>
-                    </div>
-
-                    <div id="Food & Drink" class="modal-body attractions">
-                        <h3>Food & Drink</h3>
-                        <h5>The streets of Philadelphia are filled with a diverse array of delicious, world-class food.
-                            Food trucks dot the street corners of Center City and small BYOB restaurants line
-                            neighborhood streets, while Reading Terminal Market stands as a beloved Philly landmark.
-                            Local distilleries and craft food alongside colorful ethnic foods have shaped the city's
-                            gourmet landscape.
-                        </h5>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <ul>
-                                    <li>Reading Terminal Market</li>
-                                    <li>Sabrina's Cafe</li>
-                                    <li>Philly Pretzel Factory</li>
-                                    <li>Pizza
-                                        <ul>
-                                            <li>Angelo's Pizzeria</li>
-                                            <li>Tacconelli's Pizzeria</li>
-                                        </ul>
-                                    </li>
-                                    <li>Cheesesteaks, Burgers, and Hoagies
-                                        <ul>
-                                            <li>Angelo's Pizzeria</li>
-                                            <li>John's Roast Pork</li>
-                                            <li>Jim's South Street</li>
-                                            <li>SpOt Gourmet Burgers</li>
-                                            <li>PrimoHoagies</li>
-                                        </ul>
-                                    </li>
-                                    <li>Barbeque
-                                        <ul>
-                                            <li>Zig Zag BBQ</li>
-                                            <li>Sweet Lucy's Smokehouse</li>
-                                        </ul>
-                                    </li>
-                                    <li>Sweet Eats
-                                        <ul>
-                                            <li>Rita's Italian Ice</li>
-                                            <li>Lore's Chocolates</li>
-                                            <li>Franklin Fountain</li>
-                                            <li>Zwahlen's Ice Cream & Chocolate</li>
-                                            <li>Tous les Jours</li>
-                                            <li>A La Mousse</li>
-                                            <li>Delice et Chocolat</li>
-                                        </ul>
-                                    </li>
-                            </div>
-                            <div class="col-md-6">
-                                <ul>
-                                    <li>Chinatown
-                                        <ul>
-                                            <li>Tai Lake</li>
-                                            <li>Penang Malaysian Cuisine</li>
-                                            <li>Happy Lamb Hotpot</li>
-                                            <li>Nine Ting</li>
-                                            <li>Tiger Sugar</li>
-                                        </ul>
-                                    </li>
-                                    <li>Dim Sum
-                                        <ul>
-                                            <li>Ocean Harbor</li>
-                                            <li>China Gourmet</li>
-                                        </ul>
-                                    </li>
-                                    <li>Noodles
-                                        <ul>
-                                            <li>Terakawa Ramen</li>
-                                            <li>Hajimaru Ramen</li>
-                                            <li>Pho Ha Saigon</li>
-                                            <li>Pho Today</li>
-                                        </ul>
-                                    </li>
-                                    <li>Korean
-                                        <ul>
-                                            <li>Cafe Soho</li>
-                                            <li>DuBu</li>
-                                            <li>Surah</li>
-                                        </ul>
-                                    </li>
+                        <div id="Historical" class="modal-body attractions">
+                            <h3>Historical</h3>
+                            <h5>For the history buffs, the Philly area offers numerous locations to explore. In the Old
+                                City
+                                neighborhood, you can stroll the lawns of the Constitution Center or take a tour through
+                                the
+                                rooms of Independence Hall. Or for a trip outside of the City, you can visit the fields
+                                of
+                                Valley Forge.</h5>
+                            <p>
+                                National Constitution Center<br />
+                                Liberty Bell<br />
+                                Independence Hall<br />
+                                Valley Forge National Park<br />
+                                Museum of the American Revolution<br />
                                 </ul>
+                        </div>
+
+                        <div id="Food & Drink" class="modal-body attractions">
+                            <h3>Food & Drink</h3>
+                            <h5>The streets of Philadelphia are filled with a diverse array of delicious, world-class
+                                food.
+                                Food trucks dot the street corners of Center City and small BYOB restaurants line
+                                neighborhood streets, while Reading Terminal Market stands as a beloved Philly landmark.
+                                Local distilleries and craft food alongside colorful ethnic foods have shaped the city's
+                                gourmet landscape.
+                            </h5>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p><strong>Misc</strong><br />
+                                        Reading Terminal Market<br />
+                                        Sabrina's Cafe</br>
+                                        Philly Pretzel Factory<br />
+                                        <strong>Pizza</strong><br />
+                                        Angelo's Pizzeria<br />
+                                        Tacconelli's Pizzeria<br />
+                                        <strong>Cheesesteaks, Burgers, and Hoagies</strong><br />
+                                        Angelo's Pizzeria<br />
+                                        John's Roast Pork<br />
+                                        Jim's South Street<br />
+                                        SpOt Gourmet Burgers<br />
+                                        PrimoHoagies<br />
+                                        <strong>Barbeque</strong><br />
+                                        Zig Zag BBQ</br>
+                                        Sweet Lucy's Smokehouse</br>
+                                        <strong>Sweet Eats</strong><br />
+                                        Rita's Italian Ice<br />
+                                        Lore's Chocolates<br />
+                                        Franklin Fountain<br />
+                                        Zwahlen's Ice Cream & Chocolate<br />
+                                        Tous les Jours<br />
+                                        A La Mousse<br />
+                                        Delice et Chocolat<br />
+                                    </p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p><strong>Chinatown</strong><br />
+                                        Tai Lake<br />
+                                        Penang Malaysian Cuisine<br />
+                                        Happy Lamb Hotpot<br />
+                                        Nine Ting<br />
+                                        Tiger Sugar<br />
+                                        <strong>Dim Sum</strong><br />
+                                        Ocean Harbor</br>
+                                        China Gourmet</br>
+                                        <strong>Noodles</strong><br />
+                                        Terakawa Ramen</br>
+                                        Hajimaru Ramen<br />
+                                        Pho Ha Saigon<br />
+                                        Pho Today<br />
+                                        <strong>Korean</strong><br />
+                                        Cafe Soho<br />
+                                        DuBu<br />
+                                        Surah<br />
+                                </div>
                             </div>
                         </div>
+
+                        <!-- TODO Figure out how to make this script work scripts file?-->
+                        <script>
+                            document.getElementsByClassName("tablink")[0].click();
+
+                            function openAttractions(evt, tabname) {
+                                var i, x, tablinks;
+                                x = document.getElementsByClassName("attractions");
+                                for (i = 0; i < x.length; i++) {
+                                    x[i].style.display = "none";
+                                }
+                                tablinks = document.getElementsByClassName("tablink");
+                                for (i = 0; i < x.length; i++) {
+                                    tablinks[i].classList.remove("light-grey");
+                                }
+                                document.getElementById(tabname).style.display = "block";
+                                evt.currentTarget.classList.add("light-grey");
+                            }
+                        </script>
                     </div>
-
-                    <!-- TODO Figure out how to make this script work in the scripts.js file-->
-                    <script>
-                        document.getElementsByClassName("tablink")[0].click();
-
-                        function openAttractions(evt, tabname) {
-                            var i, x, tablinks;
-                            x = document.getElementsByClassName("attractions");
-                            for (i = 0; i < x.length; i++) {
-                                x[i].style.display = "none";
-                            }
-                            tablinks = document.getElementsByClassName("tablink");
-                            for (i = 0; i < x.length; i++) {
-                                tablinks[i].classList.remove("light-grey");
-                            }
-                            document.getElementById(tabname).style.display = "block";
-                            evt.currentTarget.classList.add("light-grey");
-                        }
-                    </script>
-
-                    <!-- /.modal-content -->
-                </div><!-- /.modal-dialog -->
-            </div>
+                </div>
     </section>
 
     <section id="map" class="section-padding">
@@ -599,37 +798,33 @@
                         </div>
                     </div>
                     <div id="map-content" class="pointer-events-auto">
-                        <div class="row">
+                        <div class="row section-padding">
                             <div class="col-md-6 text-center">
-                                <h5 class="map-title">Ceremony</h5>
-                                <h5>Appleford Estate</h5>
-                                <p class="address"><a href="https://maps.app.goo.gl/3yLSmsPSvPXbkLCSA">770 Mt Moro
-                                        Road<br />
-                                        Villanova, PA 19085</a></p>
+                                <h5><strong>Ceremony</strong><br />
+                                    Appleford Estate</h5>
+                                <h7><a href="https://maps.app.goo.gl/3yLSmsPSvPXbkLCSA">770 Mt Moro Road<br />Villanova,
+                                        PA 19085</a></h7>
                             </div>
                             <div class="col-md-6 text-center">
-                                <h5 class="map-title">Banquet</h5>
-                                <h5>JinDing Restaurant</h5>
-                                <p class="address"><a href="https://maps.app.goo.gl/aLe1jHeDFfVorXTR9">1051 Conestoga
-                                        Road<br />
-                                        Bryn Mawr, PA 19010</a></p>
+                                <h5><strong>Banquet</strong><br />
+                                    JinDing Restaurant</h5>
+                                <h7><a href="https://maps.app.goo.gl/aLe1jHeDFfVorXTR9">1051 Conestoga Road<br />Bryn
+                                        Mawr, PA 19010</a></h7>
                             </div>
                         </div>
                         <div class="row text-center">
                             <div class="col-md-12" style="padding: 5px;">
                                 <a class="btn btn-accent btn-small" id="btn-show-map"><i
-                                        class="fa fa-map-marker"></i>&nbsp;&nbsp;Show
-                                    map</a>
+                                        class="fa fa-map-marker"></i>&nbsp;&nbsp;Show Map</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- TODO Add Transportation (Shuttle, Airport, SEPTA?) and Accomodations Information; only have some of this info currently,
-    will have to be partial setup and updated later-->
+        </div>
+    </section>
 
     <section class="rsvp text-center" id="rsvp">
 
@@ -641,7 +836,7 @@
                         </button>
                         <div class="section-padding">
                             <h3>Thank you!</h3>
-                            <p>We are glad to see you join us on our big day.</p>
+                            <p>We are glad to see you join us on our big day!</p>
                             <div id="add-to-cal"></div>
                         </div>
                     </div>
@@ -687,8 +882,7 @@
                             <div class="col-md-12" id="alert-wrapper"></div>
                         </div>
                         <button class="btn-fill rsvp-btn">
-                            Yes,
-                            that's me!
+                            Yes, that's me!
                         </button>
                     </form>
                 </div>
@@ -740,8 +934,8 @@
                                     <h5>If I have any other questions about the wedding, who should I contact?</h5>
                                     <p>Please contact Tracey or Stephen directly.</p>
                                 </div>
-                            </div><!-- /.modal-content -->
-                        </div><!-- /.modal-dialog -->
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
