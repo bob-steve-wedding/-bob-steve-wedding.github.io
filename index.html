@@ -125,94 +125,7 @@
 
                 </div>
             </div>
-            <!-- TODO Make this clock show up properly
-            <div class="clock-container">
-                <div class="row">
-                    <div class="clock-col">
-                        <p class="clock-day clock-timer">
-                        </p>
-                        <p class="clock-label">
-                            Days
-                        </p>
-                    </div>
-                    <div class="clock-col">
-                        <p class="clock-hours clock-timer">
-                        </p>
-                        <p class="clock-label">
-                            Hours
-                        </p>
-                    </div>
-                    <div class="clock-col">
-                        <p class="clock-minutes clock-timer">
-                        </p>
-                        <p class="clock-label">
-                            Minutes
-                        </p>
-                    </div>
-                    <div class="clock-col">
-                        <p class="clock-seconds clock-timer">
-                        </p>
-                        <p class="clock-label">
-                            Seconds
-                        </p>
-                    </div>
-                </div>
-                <script>
-                    document.addEventListener('DOMContentLoaded', () =>
-                        requestAnimationFrame(updateTime)
-                    )
-
-                    // Set countdown date
-                    var countDownDate = new Date("Oct 27, 2024 11:00:00 GMT-05:00").getTime();
-
-                    // Set update interval to every 1 second
-                    var x = setInterval(function () {
-
-
-                    }, 1000);
-
-                    function updateTime() {
-                        // Get today's date and time
-                        var now = new Date().getTime();
-
-                        // Find the distance between now and the count down date
-                        var distance = countDownDate - now;
-
-                        if (distance < 0) {
-                            distance = now - countDownDate;
-                        }
-
-                        // Time calculations for days, hours, minutes and seconds
-                        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                        document.documentElement.style.setProperty('--timer-day', "'" + days + "'");
-
-                        if (hours > 9) {
-                            document.documentElement.style.setProperty('--timer-hours', "'" + hours + "'");
-                        } else {
-                            document.documentElement.style.setProperty('--timer-hours', "'0" + hours + "'");
-                        }
-
-                        if (minutes > 9) {
-                            document.documentElement.style.setProperty('--timer-minutes', "'" + minutes + "'");
-                        } else {
-                            document.documentElement.style.setProperty('--timer-minutes', "'0" + minutes + "'");
-                        }
-
-                        if (seconds > 9) {
-                            document.documentElement.style.setProperty('--timer-seconds', "'" + seconds + "'");
-                        } else {
-                            document.documentElement.style.setProperty('--timer-seconds', "'0" + seconds + "'");
-                        }
-
-                        requestAnimationFrame(updateTime);
-                    }
-                </script>
-            </div>-->
-        </div>
+            <div id="weddingStart" class="flipdown text-center"></div>
     </section>
 
     <section id="intro">
@@ -851,6 +764,8 @@
     <script src="js/jquery.flexslider-min.js"></script>
     <script src="js/jquery.mb.YTPlayer.min.js"></script>
     <script src="js/vendor/ouical.js"></script>
+    <link rel="stylesheet" href="css/flipdown.css" />
+    <script src="js/vendor/flipdown.js"></script>
     <script src="js/scripts.min.js"></script>
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQ58uvFy75zthw-cK3iQaTKhhCkmqn-e8&callback=initMap"></script>

@@ -213,6 +213,11 @@ $(document).ready(function () {
 
 /********************** Extras **********************/
 
+window.addEventListener("DOMContentLoaded", function(){
+    date = new Date("Oct 27, 2024 11:00:00 GMT-05:00");
+    new FlipDown(date.getTime() / 1000, "weddingStart").start();
+});
+ 
 // Google map
 function initMap() {
     var ceremonyLocation = {lat: 40.053529, lng: -75.325912};
