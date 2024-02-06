@@ -226,8 +226,9 @@
         padding: 0 20px;
         border-left: none;
     }
-    .attractions-padding {
-        padding: 15px 20px;
+    .events .attractions-padding {
+        padding-left: 35px;
+        padding-right: 35px;
     }
     
     #eng-pics .img-wrap {
