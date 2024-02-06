@@ -206,6 +206,42 @@ $(document).ready(function () {
 
 });
 
+/********************** Button Modals **********************/
+
+// Banquet Menu
+function openBanquetMenu(evt, tabname) {
+    var i, x, tablinks;
+    x = document.getElementsByClassName("bqm");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    section = document.getElementById("bqm-modal")
+    tablinks = section.getElementsByClassName("tablink");
+    for (i = 0; i < x.length; i++) {
+        tablinks[i].classList.remove("selected");
+    }
+    document.getElementById(tabname).style.display = "block";
+    evt.currentTarget.classList.add("selected");
+}
+
+// Attractions
+function openAttractions(evt, tabname) {
+    var i, x, tablinks;
+    x = document.getElementsByClassName("attractions");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    section = document.getElementById("ttd-modal")
+    tablinks = section.getElementsByClassName("tablink");
+    for (i = 0; i < x.length; i++) {
+        tablinks[i].classList.remove("selected");
+    }
+    document.getElementById(tabname).style.display = "block";
+    evt.currentTarget.classList.add("selected");
+}                           
+
+
+
 /********************** Extras **********************/
 
 window.addEventListener("DOMContentLoaded", function(){
