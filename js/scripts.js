@@ -247,6 +247,14 @@ function openAttractions(evt, tabname) {
 window.addEventListener("DOMContentLoaded", function(){
     date = new Date("Oct 27, 2024 11:00:00 GMT-05:00");
     new FlipDown(date.getTime() / 1000, "weddingStart").start();
+
+    // Invitation text 
+    if (new Date() > new Date("Oct 27, 2024 11:00:00 GMT-05:00")) {
+        document.getElementById('invitation-text').innerHTML = '<h3>We got married!</h3><p>The date was <strong>October 27<sup>th</sup> 2024</strong>, and we thank you for being a part of it!</p><h3>Here\'s how long we\'ve been married:</h3>';
+    } else {
+        document.getElementById('invitation-text').innerHTML = '<h3>We are getting married!</h3><p>The date is <strong>October 27<sup>th</sup> 2024</strong>, ' +
+            'and we would love for you to be a part of it!</p><h3>Here\'s the Countdown:</h3>';
+    }
 });
  
 // Google map
