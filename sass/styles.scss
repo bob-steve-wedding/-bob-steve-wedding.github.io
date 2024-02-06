@@ -546,6 +546,21 @@ Features-stack
 .events
 ========================================================================== */
 .events {
+    position: relative;
+    background-color: $section-dark;
+    overflow: hidden;
+
+  .symbol {
+    opacity: 0.1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+  }
+  .container {
+    position: relative;
+  }
   .leftcol {
     padding-right: 100px;
     border-right: solid 1px $keyline-color;
