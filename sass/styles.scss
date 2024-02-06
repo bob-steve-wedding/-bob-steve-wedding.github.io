@@ -617,6 +617,13 @@ Features-stack
   }
 }
 
+.appleford-col {
+  min-height: 425px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 /* ==========================================================================
 .blog
 ========================================================================== */
