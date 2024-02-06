@@ -248,6 +248,41 @@ Navigation
 }
 
 /* ==========================================================================
+Modal Tabs
+========================================================================== */
+.attractions {
+  display: none;
+}
+
+.bar {
+  width: 100%;
+  overflow: hidden;
+}
+
+.bar .bar-item {
+  padding: 8px 16px;
+  float: left;
+  width: auto;
+  border: none;
+  display: block;
+  outline: 0;
+  background: $light-gray;
+  
+
+  &:hover {
+    background: $mid-gray;
+    color: white;
+  }
+}
+
+// the selected tab in the tab bar
+.bar .selected {
+  background: $mid-gray !important;
+  color: white;
+}
+
+
+/* ==========================================================================
 Hero
 ========================================================================== */
 .hero {
