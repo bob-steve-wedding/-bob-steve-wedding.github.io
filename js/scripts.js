@@ -49,7 +49,6 @@ $(document).ready(function () {
     });
 
     $('.wp10').waypoint(function () {
-        console.log("wp10");
         $('.wp10').addClass('animated fadeInLeft');
     }, {
         offset: '75%'

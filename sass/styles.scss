@@ -515,8 +515,9 @@ Features-stack
 }
 
 .clock {
-  width: 570px !important;
+  width: fit-content !important;
   margin:auto;
+  overflow: clip;
 }
 /* ==========================================================================
 .features-extra
@@ -604,10 +605,7 @@ Features-stack
     padding-left: 100px;
     border-left: solid 1px $keyline-color;
   }
-  .attractions-padding {
-    padding-left: 100px;
-    padding-right: 100px;
-  }
+  .attractions
 
   .time {
     font-size: 13px;
@@ -615,13 +613,6 @@ Features-stack
     text-transform: lowercase;
     color: $txt-primary;
   }
-}
-
-.appleford-col {
-  min-height: 425px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 /* ==========================================================================
