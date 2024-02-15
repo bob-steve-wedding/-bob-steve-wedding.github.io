@@ -369,117 +369,135 @@
 
     <!--TODO Look into making this a slideshow/gallery instead-->
     <section id="eng-pics" class="section-padding">
-        <div class="container-fluid">
-            <div class="row engagement_pics">
-                <div class="col-md-12 text-center">
-                    <h3 class="header">Engagement Photos</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="wide-5">
-                    <a class="fancybox" rel="group" href="img/eng_pics/509_rs.jpg">
-                        <div class="img-wrap">
-                            <div class="overlay">
-                                <i class="fa fa-search"></i>
-                            </div>
-                            <img src="img/eng_pics/509_pre.jpg" alt="" />
-                        </div>
-                    </a>
-                </div>
-                <div class="wide-5">
-                    <a class="fancybox" rel="group" href="img/eng_pics/530_rs.jpg">
-                        <div class="img-wrap">
-                            <div class="overlay">
-                                <i class="fa fa-search"></i>
-                            </div>
-                            <img src="img/eng_pics/530_pre.jpg" alt="" />
-                        </div>
-                    </a>
-                </div>
-                <div class="wide-5">
-                    <a class="fancybox" rel="group" href="img/eng_pics/713_rs.jpg">
-                        <div class="img-wrap">
-                            <div class="overlay">
-                                <i class="fa fa-search"></i>
-                            </div>
-                            <img src="img/eng_pics/713_pre.jpg" alt="" />
-                        </div>
-                    </a>
-                </div>
-                <div class="wide-5">
-                    <a class="fancybox" rel="group" href="img/eng_pics/1223_rs.jpg">
-                        <div class="img-wrap">
-                            <div class="overlay">
-                                <i class="fa fa-search"></i>
-                            </div>
-                            <img src="img/eng_pics/1223_pre.jpg" alt="" />
-                        </div>
-                    </a>
-                </div>
-                <div class="wide-5">
-                    <a class="fancybox" rel="group" href="img/eng_pics/1016_rs.jpg">
-                        <div class="img-wrap">
-                            <div class="overlay">
-                                <i class="fa fa-search"></i>
-                            </div>
-                            <img src="img/eng_pics/1016_pre.jpg" alt="" />
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="wide-5">
-                    <a class="fancybox" rel="group" href="img/eng_pics/60_rs.jpg">
-                        <div class="img-wrap">
-                            <div class="overlay">
-                                <i class="fa fa-search"></i>
-                            </div>
-                            <img src="img/eng_pics/60_pre.jpg" alt="" />
-                        </div>
-                    </a>
-                </div>
-                <div class="wide-5">
-                    <a class="fancybox" rel="group" href="img/eng_pics/1320_rs.jpg">
-                        <div class="img-wrap">
-                            <div class="overlay">
-                                <i class="fa fa-search"></i>
-                            </div>
-                            <img src="img/eng_pics/1320_pre.jpg" alt="" />
-                        </div>
-                    </a>
-                </div>
-                <div class="wide-5">
-                    <a class="fancybox" rel="group" href="img/eng_pics/1509_rs.jpg">
-                        <div class="img-wrap">
-                            <div class="overlay">
-                                <i class="fa fa-search"></i>
-                            </div>
-                            <img src="img/eng_pics/1509_pre.jpg" alt="" />
-                        </div>
-                    </a>
-                </div>
-                <div class="wide-5">
-                    <a class="fancybox" rel="group" href="img/eng_pics/1581_rs.jpg">
-                        <div class="img-wrap">
-                            <div class="overlay">
-                                <i class="fa fa-search"></i>
-                            </div>
-                            <img src="img/eng_pics/1581_pre.jpg" alt="" />
-                        </div>
-                    </a>
-                </div>
-                <div class="wide-5">
-                    <a class="fancybox" rel="group" href="img/eng_pics/965_rs.jpg">
-                        <div class="img-wrap">
-                            <div class="overlay">
-                                <i class="fa fa-search"></i>
-                            </div>
-                            <img src="img/eng_pics/965_pre.jpg" alt="" />
-                        </div>
-                    </a>
-                </div>
+        <div class="row engagement_pics">
+            <div class="col-md-12 text-center">
+                <h3 class="header">Engagement Photos</h3>
             </div>
         </div>
+        <script>
+            document.addEventListener( 'DOMContentLoaded', function() {
+              var splide = new Splide( '.splide', {
+                type: 'loop',
+                height : '100rem',
+                autoWidth: true,
+                
+                gap        : 10,
+                rewind     : true,
+                pagination : false,
+                autoplay: true,
+                pauseOnHover: true,
+                cover: true,
+                }
+              );
+              splide.mount();
+            } );
+          </script>
+        <section class="splide" aria-label="Splide Basic HTML Example">
+            <div class="splide__track">
+                  <ul class="splide__list">
+                      <li class="splide__slide">
+                        <a class="fancybox" rel="group" href="img/eng_pics/509_rs.jpg">
+                            <div class="img-wrap">
+                                <div class="overlay">
+                                    <i class="fa fa-search"></i>
+                                </div>
+                                <img src="img/eng_pics/509_pre.jpg" alt="" />
+                            </div>
+                        </a>
+                      </li>
+                      <li class="splide__slide">
+                        <a class="fancybox" rel="group" href="img/eng_pics/530_rs.jpg">
+                            <div class="img-wrap">
+                                <div class="overlay">
+                                    <i class="fa fa-search"></i>
+                                </div>
+                                <img src="img/eng_pics/530_pre.jpg" alt="" />
+                            </div>
+                        </a>
+                      </li>
+                      <li class="splide__slide">
+                        <a class="fancybox" rel="group" href="img/eng_pics/713_rs.jpg">
+                            <div class="img-wrap">
+                                <div class="overlay">
+                                    <i class="fa fa-search"></i>
+                                </div>
+                                <img src="img/eng_pics/713_pre.jpg" alt="" />
+                            </div>
+                        </a>
+                      </li>
+                      <li class="splide__slide">
+                        <a class="fancybox" rel="group" href="img/eng_pics/1223_rs.jpg">
+                            <div class="img-wrap">
+                                <div class="overlay">
+                                    <i class="fa fa-search"></i>
+                                </div>
+                                <img src="img/eng_pics/1223_pre.jpg" alt="" />
+                            </div>
+                        </a>
+                      </li>
+                      <li class="splide__slide">
+                        <a class="fancybox" rel="group" href="img/eng_pics/1016_rs.jpg">
+                            <div class="img-wrap">
+                                <div class="overlay">
+                                    <i class="fa fa-search"></i>
+                                </div>
+                                <img src="img/eng_pics/1016_pre.jpg" alt="" />
+                            </div>
+                        </a>
+                      </li>
+                      <li class="splide__slide">
+                        <a class="fancybox" rel="group" href="img/eng_pics/60_rs.jpg">
+                            <div class="img-wrap">
+                                <div class="overlay">
+                                    <i class="fa fa-search"></i>
+                                </div>
+                                <img src="img/eng_pics/60_pre.jpg" alt="" />
+                            </div>
+                        </a>
+                      </li>
+                      <li class="splide__slide">
+                        <a class="fancybox" rel="group" href="img/eng_pics/1320_rs.jpg">
+                            <div class="img-wrap">
+                                <div class="overlay">
+                                    <i class="fa fa-search"></i>
+                                </div>
+                                <img src="img/eng_pics/1320_pre.jpg" alt="" />
+                            </div>
+                        </a>
+                      </li>
+                      <li class="splide__slide">
+                        <a class="fancybox" rel="group" href="img/eng_pics/1509_rs.jpg">
+                            <div class="img-wrap">
+                                <div class="overlay">
+                                    <i class="fa fa-search"></i>
+                                </div>
+                                <img src="img/eng_pics/1509_pre.jpg" alt="" />
+                            </div>
+                        </a>
+                      </li>
+                      <li class="splide__slide">
+                        <a class="fancybox" rel="group" href="img/eng_pics/1581_rs.jpg">
+                            <div class="img-wrap">
+                                <div class="overlay">
+                                    <i class="fa fa-search"></i>
+                                </div>
+                                <img src="img/eng_pics/1581_pre.jpg" alt="" />
+                            </div>
+                        </a>
+                      </li>
+                      <li class="splide__slide">
+                        <a class="fancybox" rel="group" href="img/eng_pics/965_rs.jpg">
+                            <div class="img-wrap">
+                                <div class="overlay">
+                                    <i class="fa fa-search"></i>
+                                </div>
+                                <img src="img/eng_pics/965_pre.jpg" alt="" />
+                            </div>
+                        </a>
+                      </li>
+                  </ul>
+            </div>
+        </section>
         <div class="container">
             <div class="row hidden-lg hidden-md hidden-xs">
                 <div class="col-xs-12 section-border section-padding"></div>
@@ -852,6 +870,8 @@
     <link rel="stylesheet" href="css/flipdown.css" />
     <script src="js/vendor/flipdown.js"></script>
     <script src="js/scripts.min.js"></script>
+    <script src="node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="node_modules/@splidejs/splide/dist/css/splide.min.css" />
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQ58uvFy75zthw-cK3iQaTKhhCkmqn-e8&callback=initMap"></script>
 </body>
