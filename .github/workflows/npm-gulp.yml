@@ -37,6 +37,7 @@ jobs:
         cp -R fonts _site/fonts
         cp -R img _site/img
         cp -R js _site/js
+        cp -R node_modules _site/node_modules
         cp *.png _site/
         cp browserconfig.xml _site/
         cp favicon.ico _site/
