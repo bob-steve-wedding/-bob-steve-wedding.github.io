@@ -268,7 +268,7 @@ function initMap() {
     var marker1 = new google.maps.Marker({
         position: ceremonyLocation,
         map: map,
-        title: "Ceremony"
+        label: "Ceremony"
     });
 
     var banquetLocation = {lat: 40.022860572142974, lng: -75.32603667570083};
@@ -276,7 +276,7 @@ function initMap() {
     var marker2 = new google.maps.Marker({
         position: banquetLocation,
         map: map,
-        title: "Banquet"
+        label: "Banquet"
     });
 }
 
