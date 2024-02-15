@@ -794,8 +794,6 @@ Google map
   width: 100%;
 }
 #map-content-wrapper {
-  position: relative;
-  margin-top: -502px;
   margin-bottom: 150px;
 }
 #map-content {
@@ -938,14 +936,14 @@ footer {
   padding-bottom: 10px;
 }
 
-.wide-5 {
-  width: 20%;
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-  float: left;
-  padding-bottom: 15px;
+.wide-image {
+  height: 250px;
+  width: 500px !important;
+}
+
+.tall-image {
+  height: 500px;
+  width: 250px !important;
 }
 /* ==========================================================================
 Bootstrap override
