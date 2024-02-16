@@ -258,6 +258,21 @@
     }
 }
 
+@media screen and (max-width: 1000px) {
+    .wide-image {
+        width: 100%;
+        height: auto;
+      }
+}
+
+@media screen and (max-width: 460px) {
+    .tall-image {
+        height: 100%;
+        margin:auto;
+        width: auto;
+      }
+}
+
 @media screen and (max-width: 767px) {
     .hero {
         background: url('../img/hero-min-small.jpg') center center;

@@ -697,18 +697,15 @@ Features-stack
 Engagement Pics
 ========================================================================== */
 #eng-pics {
-  img {
-    width: 100%;
-    height: auto;
-    -moz-transition: all 300ms ease-in-out;
-    -o-transition: all 300ms ease-in-out;
-    -webkit-transition: all 300ms ease-in-out;
-    transition: all 300ms ease-in-out;
-  }
   .img-wrap {
+    height: 100%;
+    width: 100%;
+    background-color: #000;
     position: relative;
     overflow: hidden;
     border-radius: 4px;
+    display:flex;
+    align-items: center;
   }
   .img-wrap .overlay {
     position: absolute;
@@ -936,14 +933,25 @@ footer {
   padding-bottom: 10px;
 }
 
+.slide-show {
+  width: 75%;
+  max-width: 750px;
+  margin: auto;
+}
+
+.track {
+  height: 500px;
+}
+
 .wide-image {
-  height: 350px;
-  width: 400px !important;
+  height: 100%;
+  margin:auto;
+  width: auto;
 }
 
 .tall-image {
-  height: 350px;
-  width: 250px !important;
+  height: 100%;
+  margin:auto;
 }
 /* ==========================================================================
 Bootstrap override
