@@ -270,18 +270,19 @@ Modal Tabs
   border: none;
   display: block;
   outline: 0;
-  background: $light-gray;
+  background: $accent-color-hover;
+  color: #fff;
   
 
   &:hover {
-    background: $mid-gray;
+    background: $accent-color;
     color: white;
   }
 }
 
 // the selected tab in the tab bar
 .bar .selected {
-  background: $mid-gray !important;
+  background: $accent-color !important;
   color: white;
 }
 
@@ -941,6 +942,14 @@ footer {
   margin: auto;
 }
 
+.splide__arrow {
+  background: $accent-color-hover !important;
+}
+
+.splide__pagination__page.is-active {
+  background: $accent-color-hover !important;
+}
+
 .track {
   height: 500px;
 }
@@ -967,4 +976,8 @@ body.modal-open {
 
 .indent {
   padding-left:2em
+}
+
+.modal-content {
+  background-color: $background-color;
 }
