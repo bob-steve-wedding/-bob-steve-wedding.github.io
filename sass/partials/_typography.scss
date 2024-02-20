@@ -3,7 +3,7 @@
 
 // Fonts
 
-$sans-serif: Josefin Slab,Georgia,Times,'Times New Roman',serif;
+$sans-serif: Josefin Sans,'Open Sans', sans-serif;
 $header-font: Josefin Slab,Georgia,Times,'Times New Roman',serif;
 $serif: Josefin Slab,Georgia,Times,'Times New Roman',serif;
 $accent-font: Josefin Slab,Georgia,Times,'Times New Roman',serif;
@@ -12,7 +12,8 @@ $accent-font: Josefin Slab,Georgia,Times,'Times New Roman',serif;
 // $accent-font: 'Nunito', sans-serif;
 
 // Weights
-
+$thin: 100;
+$extra-light: 200;
 $light: 300;
 $normal: 400;
 $semibold: 500;
@@ -47,6 +48,7 @@ p {
   line-height: $base-line-height;
   color: $txt-primary;
   padding-bottom: 20px;
+  font-weight: $thin;
 }
 
 h1 {
