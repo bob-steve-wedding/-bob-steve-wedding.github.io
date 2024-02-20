@@ -36,6 +36,9 @@ a:hover, a:focus {
   color: $accent-color-hover;
   text-decoration: none;
 }
+h1, h2, h3, h4, h5, h6, h7 {
+  font-family: $header-font;
+}
 body {
   font-family: $sans-serif;
   font-weight: $light;
@@ -948,6 +951,10 @@ footer {
 
 .splide__pagination__page.is-active {
   background: $accent-color-hover !important;
+}
+
+.fancybox-next {
+  background-image: url()
 }
 
 .track {
