@@ -3,11 +3,12 @@
 /********** Theme: dark **********/
 /* Font styles */
 .flipdown.flipdown__theme-dark {
-    font-family: sans-serif;
+    font-family: Josefin Sans,'Open Sans', sans-serif;
     font-weight: bold;
   }
   /* Rotor group headings */
   .flipdown.flipdown__theme-dark .rotor-group-heading:before {
+    font-family: Josefin Sans,'Open Sans', sans-serif;
     color: #000000;
   }
   /* Delimeters */
@@ -36,11 +37,12 @@
   /********** Theme: light **********/
   /* Font styles */
   .flipdown.flipdown__theme-light {
-    font-family: sans-serif;
+    font-family: Josefin Sans,'Open Sans', sans-serif;
     font-weight: bold;
   }
   /* Rotor group headings */
   .flipdown.flipdown__theme-light .rotor-group-heading:before {
+    font-family: Josefin Sans,'Open Sans', sans-serif;
     color: #EEEEEE;
   }
   /* Delimeters */
