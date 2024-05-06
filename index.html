@@ -193,32 +193,121 @@
                     <div class="wp3">
                         <h5>Ceremony <span class="time">11 AM - 11:30 PM</span></h5>
                         <p>Please join us for our ceremony that will be held on the lawn of Appleford Estate.
-                            </p>
+                        </p>
                     </div>
                     <div class="wp5">
                         <h5>Cocktails and Luncheon <span class="time">11:30 PM - 4 PM</span></h5>
                         <p>Afterwards, please take a stroll through the beautiful rose garden to reach the historic
                             home's patio and adjacent lawn, where you will find food and games to enjoy during the
-                            cocktail hour. Our lunch reception will be hosted on the tented terrace, where we hope you will eat
+                            cocktail hour. Our lunch reception will be hosted on the tented terrace, where we hope you
+                            will eat
                             to your heart's content.</p>
                         <div class="row text-center">
-                            <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#lrm-modal">
+                            <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#afm-modal">
                                 <i class="fa fa-barcode"></i>
-                                <h7>&nbsp;&nbsp;Luncheon Menu</h7>
+                                <h7>&nbsp;&nbsp;Appleford Menu</h7>
                             </a>
                         </div>
                     </div>
-                    <div id="lrm-modal" class="modal fade" tabindex="-1" role="dialog">
+                    <div id="afm-modal" class="modal fade" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-body">
                                     <button type="button" class="close" data-dismiss="modal"
                                         aria-label="Close"><span>&times;</span>
                                     </button>
-                                    <h3 class="text-center">Luncheon Menu</h3>
-                                    <p>TBD
-                                        <!-- TODO Insert banquet menu; remember how to set up four tabs (Drinks, Hors D'oeuvres, Entrees, Desserts)-->
-                                    </p>
+                                    <div class="bar">
+                                        <button class="tablink bar-item button selected"
+                                            onclick="openApplefordMenu(event, 'Drinks')">Drinks
+                                        </button>
+                                        <button class="tablink bar-item button"
+                                            onclick="openApplefordMenu(event, 'Hors D\'oeuvres')">Hors D'oeuvres
+                                        </button>
+                                        <button class="tablink bar-item button"
+                                            onclick="openApplefordMenu(event, 'Entrées')">Entrées
+                                        </button>
+                                        <button class="tablink bar-item button"
+                                            onclick="openApplefordMenu(event, 'Desserts')">Desserts
+                                        </button>
+                                    </div>
+                                    <div id="Drinks" class="modal-body afm" style="display:block;">
+                                        <h3>Drinks</h3>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <h5>Pre-Ceremony Drinks</h5>
+                                                <div class="indent">
+                                                    <h5>Spa Water</h5>
+                                                    <h5>Warm Apple Cider</h5>
+                                                </div>
+                                                <h5>Signature Drink</h5>
+                                                <div class="indent">
+                                                    <h5>Espresso Martini</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="Hors D'oeuvres" class="modal-body afm">
+                                        <h3>Passed Hors D'oeuvres</h3>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <h5>Scallops & Bacon</h5>
+                                                <h5>Hoisin Braised Short Rib Tacos</h5>
+                                                <h5>Duck & Cranberry Quesadillas</h5>
+                                                <h5>Risotto Rounds</h5>
+                                                <h5>Mini Grilled Cheeses</h5>
+                                                <h5>Onion Soup Bites</h5>
+                                                <h5>Charcuterie & Cheese Display</h5>
+                                                <div class="indent">
+                                                    <h5>Artisan Cheeses</h5>
+                                                    <h5>Finest Charcuteries</h5>
+                                                    <h5>Gourmet Bread & Crackers</h5>
+                                                    <h5>Fresh & Dried Fruits</h5>
+                                                    <h5>Olives, Cornichons, and Pepper Shooters
+                                                        <h5>Marinated & Pickled Vegetables</h5>
+                                                        <h5>Grilled Vegetables</h5>
+                                                        <h5>Whole Grain Mustard</h5>
+                                                        <h5>Seasonal Fruit Jam</h5>
+                                                        <h5>Honey</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="Entrées" class="modal-body afm">
+                                        <h3>Entrées</h3>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <h5>Plated First Course</h5>
+                                                <div class="indent">
+                                                    <h5>Mild Mushroom Bisque</h5>
+                                                </div>
+                                                <h5>Short Plates Station</h5>
+                                                <div class="indent">
+                                                    <h5>Cabernet Braised Short Ribs</h5>
+                                                    <h5>Eggplant Caponata</h5>
+                                                </div>
+                                                <h5>Philly Fun Station</h5>
+                                                <div class="indent">
+                                                    <h5>Classic Beef Cheesesteaks</h5>
+                                                    <h5>Chicken Cheesesteaks</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="Desserts" class="modal-body afm">
+                                        <h3>Desserts</h3>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <h5>Wedding Cake</h5>
+                                                <h5>Warm Dessert Bar</h5>
+                                                <div class="indent">
+                                                    <h5>Blueberry Cobbler</h5>
+                                                    <h5>Chocolate Chip Bread Pudding</h5>
+                                                    <h5>Vanilla Ice Cream</h5>
+                                                </div>
+                                                <h5>Coffee Bar</h5>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div><!-- /.modal-content -->
                         </div><!-- /.modal-dialog -->
@@ -232,9 +321,9 @@
                         <h5>Tea Ceremony <span class="time">5 PM - 6 PM</span></h5>
                         <p>In this wedding tradition, the bride and groom pay their respects to their parents, new
                             in-laws, and family elders by serving them tea. The ceremony symbolizes the unification of
-                            both families.
-                            The honorees often bestow blessings and offer the new couple well wishes in their new life
-                            together, words of wisdom, or gifts. </p>
+                            both families. The honorees often bestow blessings and offer the new couple well wishes in
+                            their new life
+                            together, words of wisdom, or gifts.</p>
                     </div>
                     <div class="wp6">
                         <h5>Wedding Banquet <span class="time">6 PM - 9 PM</span></h5>
@@ -333,7 +422,7 @@
                 </div>
             </div>
 
-            <div class="row brunch">
+            <div class="row breakfast">
                 <div class="col-md-12">
                     <h5><strong>October 28</strong></h5>
                 </div>
@@ -344,7 +433,8 @@
                     </p>
                     <div class="wp7">
                         <h5>Breakfast Buffet <span class="time">8 AM - 10 AM</span></h5>
-                        <p>For those who are from out of town (or just want to hang out), we will be holding a brunch
+                        <p>For those who are from out of town (or just want to hang out), we will be holding a breakfast
+                            buffet
                             the morning after our wedding. We hope to see you there!</p>
                     </div>
                 </div>
@@ -374,7 +464,7 @@
                             are not recommended in that case!
                         </p>
                         <h5>Morning-After Breakfast Buffet</h5>
-                        <p>Please feel free to relax in casual dress as you join us for our morning-after brunch!</p>
+                        <p>Please feel free to relax in casual dress as you join us for our morning-after breakfast buffet!</p>
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
@@ -570,7 +660,8 @@
                     <h5><strong>Transportation</strong></h5>
                     <div class="wp11">
                         <h5>Shuttle Service</h5>
-                        <p>Complimentary shuttle service will be provided between the hotels and venues. Schedule pending.</p>
+                        <p>Complimentary shuttle service will be provided between the hotels and venues. Schedule
+                            pending.</p>
                     </div>
                     <div class="wp13">
                         <h5>Airport</h5>
@@ -580,7 +671,8 @@
                     <div class="wp14">
                         <h5>Public Transit</h5>
                         <p>The closest SEPTA Regional Rail station is the Conshohocken station, which is 5 minute walk
-                            from the West & Main Hotel Conshohocken, from which you can catch the complimentary shuttle to our venue.
+                            from the West & Main Hotel Conshohocken, from which you can catch the complimentary shuttle
+                            to our venue.
                         </p>
                     </div>
                 </div>

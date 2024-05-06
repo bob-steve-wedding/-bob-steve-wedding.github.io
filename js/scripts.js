@@ -207,6 +207,22 @@ $(document).ready(function () {
 
 /********************** Button Modals **********************/
 
+// Appleford Menu
+function openApplefordMenu(evt, tabname) {
+    var i, x, tablinks;
+    x = document.getElementsByClassName("afm");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    section = document.getElementById("afm-modal")
+    tablinks = section.getElementsByClassName("tablink");
+    for (i = 0; i < x.length; i++) {
+        tablinks[i].classList.remove("selected");
+    }
+    document.getElementById(tabname).style.display = "block";
+    evt.currentTarget.classList.add("selected");
+} 
+
 // Banquet Menu
 function openBanquetMenu(evt, tabname) {
     var i, x, tablinks;
@@ -237,7 +253,9 @@ function openAttractions(evt, tabname) {
     }
     document.getElementById(tabname).style.display = "block";
     evt.currentTarget.classList.add("selected");
-}                           
+}
+
+ 
 
 
 
