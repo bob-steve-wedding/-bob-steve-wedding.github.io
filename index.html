@@ -889,19 +889,13 @@
         </div><!-- /.modal -->
 
         <!--TODO Set up RSVP-->
-        <div class="container" style="display:none">
+        <div class="container">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
                     <h3>What are you waiting for?</h3>
                     <p>We would greatly appreciate if you could RSVP by September 15, 2024!</p>
                     <form id="rsvp-form" class="rsvp-form" action="" method="POST">
                         <div class="row">
-                            <div class="col-md-6 col-sm-6">
-                                <div class="form-input-group">
-                                    <i class="fa fa-envelope"></i><input type="email" name="email" class=""
-                                        placeholder="Your E-mail" required>
-                                </div>
-                            </div>
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-input-group">
                                     <i class="fa fa-user"></i><input name="name" class="" placeholder="Your Name"
@@ -912,14 +906,53 @@
                         <div class="row">
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-input-group">
-                                    <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0"
-                                        max="4" placeholder="Partner and/or Children" required>
+                                    <i class="fa fa-envelope"></i><input type="email" name="email" class=""
+                                        placeholder="Your E-mail" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-input-group">
+                                    <i class = "fa fa-home"></i><input type="textarea" name="guest_address" class="" placeholder="Your Address">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-input-group">
+                                    <i class = "fa fa-reply"></i>
+                                    <!-- TODO Cleanup dropdown menu length -->
+                                    <select id="oa_rsvp" name="oa_rsvp" class="">
+                                        <option hidden disabled selected value>Will You Be Attending?</option>
+                                        <option value="Yes">Yes, I'm Coming!</option>
+                                        <option value="No">No, I Can't Make It!</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-input-group">
                                     <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
                                         class="" min="0" placeholder="Invite Code" required>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- TODO Display only if oa_rsvp == Yes -->
+                        <div class ="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-input-group">
+                                    <i class="fa fa-calendar-check-o"></i>
+                                    <select id="events_rsvp" name="events_rsvp" class="" multiple="multiple">
+                                        <option value="event1"> Ceremony and Luncheon</option>
+                                        <option value="event2"> Tea Ceremony and Banquet</option>
+                                        <option value="event3"> Breakfast Buffet</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-input-group">
+                                    <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0"
+                                        max="5" placeholder="Partner and/or Children" required>
                                 </div>
                             </div>
                         </div>

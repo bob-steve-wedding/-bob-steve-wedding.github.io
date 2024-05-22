@@ -163,7 +163,7 @@ $(document).ready(function () {
 
             // You can also choose to set an end time
             // If an end time is set, this will take precedence over duration
-            end: new Date('Oct 27, 2024 9:00'),
+            end: new Date('Oct 27, 2024 21:00'),
 
             // Event Address
             address: '',
@@ -186,7 +186,7 @@ $(document).ready(function () {
         if (MD5($('#invite_code').val()) !== '1f4b02716c345d94c5fe4b1186e439f3') {
             $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         } else {
-            $.post('https://script.google.com/macros/s/AKfycbwLtrabgYbgpRdvrsjuI6hafs69w8HmfFQZz-uoZFx49qFbXaMYPGOOBeKWPo_4Md9F/exec', data)
+            $.post('https://script.google.com/macros/s/AKfycbzurOiZimwqNChGLNSrRV-c2tZD8knWE9nIZ8Tg1SainPg4cwDqGztDRMtaHhuIVhDk8A/exec', data)
                 .done(function (data) {
                     console.log(data);
                     if (data.result === "error") {
