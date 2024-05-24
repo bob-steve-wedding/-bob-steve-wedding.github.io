@@ -263,11 +263,11 @@
                                                     <h5>Gourmet Bread & Crackers</h5>
                                                     <h5>Fresh & Dried Fruits</h5>
                                                     <h5>Olives, Cornichons, and Pepper Shooters
-                                                        <h5>Marinated & Pickled Vegetables</h5>
-                                                        <h5>Grilled Vegetables</h5>
-                                                        <h5>Whole Grain Mustard</h5>
-                                                        <h5>Seasonal Fruit Jam</h5>
-                                                        <h5>Honey</h5>
+                                                    <h5>Marinated & Pickled Vegetables</h5>
+                                                    <h5>Grilled Vegetables</h5>
+                                                    <h5>Whole Grain Mustard</h5>
+                                                    <h5>Seasonal Fruit Jam</h5>
+                                                    <h5>Honey</h5>
                                                 </div>
                                             </div>
                                         </div>
@@ -298,6 +298,10 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <h5>Wedding Cake</h5>
+                                                <div class="indent">
+                                                    <h5>Chocolate Chip Sponge</h5>
+                                                    <h5>Espresso Buttercream</h5>
+                                                </div>
                                                 <h5>Warm Dessert Bar</h5>
                                                 <div class="indent">
                                                     <h5>Blueberry Cobbler</h5>
@@ -487,7 +491,6 @@
         </div>
     </section>
 
-    <!--TODO Look into making this a slideshow/gallery instead-->
     <section id="eng-pics" class="section-padding">
         <div class="row engagement_pics">
             <div class="col-md-12 text-center">
@@ -510,7 +513,7 @@
                 splide.mount();
             });
         </script>
-        <section class="splide slide-show" aria-label="Splide Basic HTML Example">
+        <section class="splide slide-show">
             <div class="splide__track track">
                 <ul class="splide__list">
                     <li class="splide__slide slide-element">
@@ -654,7 +657,7 @@
                     </div>
                     <div class="wp12">
                         <h5>Other Hotels</h5>
-                        <p>As for other hotels nearby, there is also a Residence Inn located in Conshohocken.</p>
+                        <p>As for other lodging, there is also a Residence Inn located in Conshohocken in addition to hotels in nearby Plymouth Meeting.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
@@ -784,6 +787,7 @@
                                             Tous les Jours<br />
                                             A La Mousse<br />
                                             Delice et Chocolat<br />
+                                            Mamie Colette<br />
                                         </p>
                                     </div>
                                     <div class="col-md-6">
@@ -807,7 +811,7 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <p>*Please note that these locations are takeout or limited seating only.</p>
+                                    <p>*Please note that these locations are takeout or limited seating only and may require calling ahead.</p>
                                 </div>
                             </div>
                         </div>
@@ -848,8 +852,7 @@
                                     <h5><strong>Banquet</strong><br />
                                         Jin Ding Restaurant</h5>
                                     <p class="address"><a href="https://maps.app.goo.gl/aLe1jHeDFfVorXTR9">1051
-                                            Conestoga
-                                            Road<br />Bryn Mawr, PA 19010</a></p>
+                                            Conestoga Road<br />Bryn Mawr, PA 19010</a></p>
                                 </div>
                             </div>
                         </div>
@@ -919,22 +922,21 @@
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6">
-                                <div class="form-input-group">
+                                <div class="form-input-group affirm ty-address">
                                     <i class="fa fa-home"></i><input type="text" name="address" class=""
-                                        placeholder="Your Address" required>
+                                        placeholder="Your Address">
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-input-group">
-                                    <i class="fa fa-paper-plane" id="overall_rsvp_i"></i>
-                                    <!-- TODO Cleanup dropdown menu length? Or add fa-check/fa-times to left with divider -->
-                                    <!-- TODO Change image to fa-check or fa-times -->
+                                    <i class="fa fa-paper-plane"></i>
+                                    <!-- TODO Cleanup dropdown menu length so that left edge lines up with divider -->
                                     <select id="overall_rsvp" name="overall_rsvp">
                                         <option hidden disabled selected value>Will You Be Attending?</option>
-                                        <option value="Yes"><i class="fa fa-check"></i>Yes, I'm Coming!</option>
-                                        <option value="No"><i class="fa fa-times"></i>No, I Can't Make It!</option>
+                                        <option value="Yes">Yes, I'm Coming!</option>
+                                        <option value="No">No, I Can't Make It!</option>
                                     </select>
                                 </div>
                             </div>
@@ -950,6 +952,7 @@
                                 <div class="form-input-group affirm" style="display:none;">
                                     <i class="fa fa-calendar-check-o"></i>
                                     <!-- TODO Convert to Multiple Select Dropdown Menu -->
+                                    <!-- TODO Cleanup dropdown menu length so that left edge lines up with divider -->
                                     <select id="events_rsvp" name="events_rsvp" class="" multiple>
                                         <option value="Ceremony and Luncheon"> Ceremony and Luncheon</option>
                                         <option value="Tea Ceremony and Banquet"> Tea Ceremony and Banquet</option>
@@ -959,7 +962,7 @@
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-input-group affirm" style="display:none;">
-                                    <i class="fa fa-music"></i><input type="textarea" name="song_requests" class=""
+                                    <i class="fa fa-music"></i><input type="text" name="song_requests" class=""
                                         placeholder="Song Requests">
                                 </div>
                             </div>
@@ -1080,7 +1083,7 @@
                                     <p>Unfortunately, we will not be live streaming the events.</p>
                                     <h5>Where will wedding updates be posted?</h5>
                                     <p>Please check this website for any updates as needed. If you confirm your
-                                        contact information in your RSVP, we will also send out emails to those
+                                        contact information by RSVPing, we will also send out emails to those
                                         whose email contact information we have on file.</p>
                                 </div>
                             </div><!-- /.modal-content -->

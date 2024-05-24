@@ -207,12 +207,13 @@ $(document).ready(function () {
     $('#overall_rsvp').on('change', function(){
         if ($(this).val() === 'Yes') {
             $('.affirm').show();
+            $('.ty-address').prop('required',true);
         } else {
             $('.affirm').hide();
+            $('.ty-address').prop('required',false);
         }
     });
 
-    // TODO: Add alert for invalid values?
     $('#partysize').on('change', function(){
         // 1 guest is always required
          if ($(this).val() === '2'){
