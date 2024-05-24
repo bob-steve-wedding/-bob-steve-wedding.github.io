@@ -203,6 +203,53 @@ $(document).ready(function () {
         }
     });
 
+    // TODO: Add check for valid invite code? Determine if possible/how to clear alert each time function is triggered
+    $('#overall_rsvp').on('change', function(){
+        if ($(this).val() === 'Yes') {
+            $('.affirm').show();
+        } else {
+            $('.affirm').hide();
+        }
+    });
+
+    // TODO: Add alert for invalid values?
+    $('#partysize').on('change', function(){
+        // 1 guest is always required
+         if ($(this).val() === '2'){
+            $('.guest2').show();
+            $('.guest2-name').prop('required',true);
+            $('.guest3').hide();
+            $('.guest4').hide();
+            $('.guest5').hide();
+        } else if ($(this).val() === '3'){
+            $('.guest2').show();
+            $('.guest2-name').prop('required',true);
+            $('.guest3').show();
+            $('.guest3-name').prop('required',true);
+            $('.guest4').hide();
+            $('.guest5').hide();
+        } else if ($(this).val() === '4'){
+            $('.guest2').show();
+            $('.guest2-name').prop('required',true);
+            $('.guest3').show();
+            $('.guest3-name').prop('required',true);
+            $('.guest4').show();
+            $('.guest4-name').prop('required',true);
+            $('.guest5').hide();
+        }
+        else if ($(this).val() === '5'){
+            $('.guest2').show();
+            $('.guest2-name').prop('required',true);
+            $('.guest3').show();
+            $('.guest3-name').prop('required',true);
+            $('.guest4').show();
+            $('.guest4-name').prop('required',true);
+            $('.guest5').show();
+            $('.guest5-name').prop('required',true);
+        }
+            
+    });
+
 });
 
 /********************** Button Modals **********************/

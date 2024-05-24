@@ -904,10 +904,9 @@
                                         required>
                                 </div>
                             </div>
-                            <!-- TODO Show Dietary Restrictions only if Attending-->
                             <div class="col-md-6 col-sm-6">
-                                <div class="form-input-group">
-                                    <i class="fa fa-cutlery"></i><input name="guest-diet" class=""
+                                <div class="form-input-group affirm" style="display:none;">
+                                    <i class="fa fa-cutlery"></i><input name="guest_diet" class=""
                                         placeholder="Your Dietary Restriction(s)">
                                 </div>
                             </div>
@@ -921,8 +920,8 @@
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-input-group">
-                                    <i class="fa fa-home"></i><input type="text" name="guest_address" class=""
-                                        placeholder="Your Address">
+                                    <i class="fa fa-home"></i><input type="text" name="address" class=""
+                                        placeholder="Your Address" required>
                                 </div>
                             </div>
                         </div>
@@ -932,10 +931,10 @@
                                     <i class="fa fa-paper-plane" id="overall_rsvp_i"></i>
                                     <!-- TODO Cleanup dropdown menu length? Or add fa-check/fa-times to left with divider -->
                                     <!-- TODO Change image to fa-check or fa-times -->
-                                    <select id="overall_rsvp" name="overall_rsvp" class="">
+                                    <select id="overall_rsvp" name="overall_rsvp">
                                         <option hidden disabled selected value>Will You Be Attending?</option>
-                                        <option value="Yes">Yes, I'm Coming!</option>
-                                        <option value="No">No, I Can't Make It!</option>
+                                        <option value="Yes"><i class="fa fa-check"></i>Yes, I'm Coming!</option>
+                                        <option value="No"><i class="fa fa-times"></i>No, I Can't Make It!</option>
                                     </select>
                                 </div>
                             </div>
@@ -946,90 +945,83 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- TODO Display below part of form only if overall_rsvp == Yes -->
                         <div class="row">
                             <div class="col-md-6 col-sm-6">
-                                <div class="form-input-group">
+                                <div class="form-input-group affirm" style="display:none;">
                                     <i class="fa fa-calendar-check-o"></i>
                                     <!-- TODO Convert to Multiple Select Dropdown Menu -->
-                                    <select id="events_rsvp" name="events_rsvp" class="selectpicker" multiple>
-                                        <option value="event1"> Ceremony and Luncheon</option>
-                                        <option value="event2"> Tea Ceremony and Banquet</option>
-                                        <option value="event3"> Breakfast Buffet</option>
+                                    <select id="events_rsvp" name="events_rsvp" class="" multiple>
+                                        <option value="Ceremony and Luncheon"> Ceremony and Luncheon</option>
+                                        <option value="Tea Ceremony and Banquet"> Tea Ceremony and Banquet</option>
+                                        <option value="Breakfast Buffet"> Breakfast Buffet</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6">
-                                <div class="form-input-group">
+                                <div class="form-input-group affirm" style="display:none;">
                                     <i class="fa fa-music"></i><input type="textarea" name="song_requests" class=""
                                         placeholder="Song Requests">
                                 </div>
                             </div>
                         </div>
-                        <!-- TODO How to prevent someone typing in an invalid number? -->
-                        <!-- TODO Write script to only show up number of additional guests selected-->
                         <div class="row">
                             <div class="col-md-6 col-sm-6">
-                                <div class="form-input-group">
-                                    <i class="fa fa-users"></i><input type="number" name="extras" class="" min="1"
-                                        max="5" placeholder="Party Size" required>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- TODO How to add requirement checks for party size vs names? -->
-                        <div class="row">
-                            <div class="col-md-6 col-sm-6">
-                                <div class="form-input-group">
-                                    <i class="fa fa-user"></i><input name="name2" class="" placeholder="2nd Guest Name"
-                                        required>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <div class="form-input-group">
-                                    <i class="fa fa-cutlery"></i><input name="guest2-diet" class=""
-                                        placeholder="2nd Guest Diet. Restrict." required>
+                                <div class="form-input-group affirm" style="display:none;">
+                                    <i class="fa fa-users"></i><input type="text" name="party_size" id="partysize"
+                                    inputmode="numeric" pattern="[1-5].*?" class="" 
+                                    placeholder="Party Size (1-5)" required>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 col-sm-6">
-                                <div class="form-input-group">
-                                    <i class="fa fa-user"></i><input name="name3" class="" placeholder="3rd Guest Name"
-                                        required>
+                                <div class="form-input-group guest2" style="display:none;">
+                                    <i class="fa fa-user"></i><input name="name2" class="guest2-name" placeholder="2nd Guest Name">
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6">
-                                <div class="form-input-group">
-                                    <i class="fa fa-cutlery"></i><input name="guest3-diet" class=""
-                                        placeholder="3rd Guest Diet. Restrict." required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 col-sm-6">
-                                <div class="form-input-group">
-                                    <i class="fa fa-user"></i><input name="name4" class="" placeholder="4th Guest Name"
-                                        required>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <div class="form-input-group">
-                                    <i class="fa fa-cutlery"></i><input name="guest4-diet" class=""
-                                        placeholder="4th Guest Diet. Restrict." required>
+                                <div class="form-input-group guest2" style="display:none;">
+                                    <i class="fa fa-cutlery"></i><input name="guest2_diet" class="guest2"
+                                        placeholder="2nd Guest Diet. Restrict.">
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 col-sm-6">
-                                <div class="form-input-group">
-                                    <i class="fa fa-user"></i><input name="name5" class="" placeholder="5th Guest Name"
-                                        required>
+                                <div class="form-input-group guest3" style="display:none;">
+                                    <i class="fa fa-user"></i><input name="name3" class="guest3-name" placeholder="3rd Guest Name">
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6">
-                                <div class="form-input-group">
-                                    <i class="fa fa-cutlery"></i><input name="guest5-diet" class=""
-                                        placeholder="5th Guest Diet. Restrict." required>
+                                <div class="form-input-group guest3" style="display:none;">
+                                    <i class="fa fa-cutlery"></i><input name="guest3_diet" class="guest3"
+                                        placeholder="3rd Guest Diet. Restrict.">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-input-group guest4" style="display:none;">
+                                    <i class="fa fa-user"></i><input name="name4" class="guest4-name" placeholder="4th Guest Name">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-input-group guest4" style="display:none;">
+                                    <i class="fa fa-cutlery"></i><input name="guest4_diet" class="guest4"
+                                        placeholder="4th Guest Diet. Restrict.">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-input-group guest5" style="display:none;">
+                                    <i class="fa fa-user"></i><input name="name5" class="guest5-name" placeholder="5th Guest Name">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-input-group guest5" style="display:none;">
+                                    <i class="fa fa-cutlery"></i><input name="guest5_diet" class=""
+                                        placeholder="5th Guest Diet. Restrict.">
                                 </div>
                             </div>
                         </div>
