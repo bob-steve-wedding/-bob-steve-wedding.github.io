@@ -220,15 +220,20 @@ $(document).ready(function () {
             $('.guest2').show();
             $('.guest2-name').prop('required',true);
             $('.guest3').hide();
+            $('.guest3-name').prop('required',false);
             $('.guest4').hide();
+            $('.guest4-name').prop('required',false);
             $('.guest5').hide();
+            $('.guest5-name').prop('required',false);
         } else if ($(this).val() === '3'){
             $('.guest2').show();
             $('.guest2-name').prop('required',true);
             $('.guest3').show();
             $('.guest3-name').prop('required',true);
             $('.guest4').hide();
+            $('.guest4-name').prop('required',false);
             $('.guest5').hide();
+            $('.guest5-name').prop('required',false);
         } else if ($(this).val() === '4'){
             $('.guest2').show();
             $('.guest2-name').prop('required',true);
@@ -237,6 +242,7 @@ $(document).ready(function () {
             $('.guest4').show();
             $('.guest4-name').prop('required',true);
             $('.guest5').hide();
+            $('.guest5-name').prop('required',false);
         }
         else if ($(this).val() === '5'){
             $('.guest2').show();
