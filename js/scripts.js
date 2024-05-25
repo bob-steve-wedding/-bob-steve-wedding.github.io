@@ -215,16 +215,6 @@ $(document).ready(function () {
             $('.breakfast_rsvp').prop('required', true);
             $('.partysize').prop('required', true);
         } else {
-            
-            $('.ty-address').prop('required', false);
-            $('.ceremony_rsvp').prop('required', false);
-            $('.banquet_rsvp').prop('required', false);
-            $('.breakfast_rsvp').prop('required', false);
-            $('.partysize').prop('required', false);
-            $('.guest2-name').prop('required', false);
-            $('.guest3-name').prop('required', false);
-            $('.guest4-name').prop('required', false);
-            $('.guest5-name').prop('required', false);
             document.getElementById('ty-address').value ='';
             document.getElementById('ceremony_rsvp').value ='';
             document.getElementById('banquet_rsvp').value ='';
@@ -240,6 +230,15 @@ $(document).ready(function () {
             document.getElementById('guest3_diet').value ='';
             document.getElementById('guest4_diet').value ='';
             document.getElementById('guest5_diet').value ='';
+            $('.ty-address').prop('required', false);
+            $('.ceremony_rsvp').prop('required', false);
+            $('.banquet_rsvp').prop('required', false);
+            $('.breakfast_rsvp').prop('required', false);
+            $('.partysize').prop('required', false);
+            $('.guest2-name').prop('required', false);
+            $('.guest3-name').prop('required', false);
+            $('.guest4-name').prop('required', false);
+            $('.guest5-name').prop('required', false);
             $('.affirm').hide();
             $('.extras').hide();
             $('.guest2').hide();
@@ -252,55 +251,77 @@ $(document).ready(function () {
     $('#partysize').on('change', function () {
         // 1 guest is always required
         if ($(this).val() === '1'){
+            document.getElementById('name2').value ='';
+            document.getElementById('name3').value ='';
+            document.getElementById('name4').value ='';
+            document.getElementById('name5').value ='';
+            document.getElementById('guest2_diet').value ='';
+            document.getElementById('guest3_diet').value ='';
+            document.getElementById('guest4_diet').value ='';
+            document.getElementById('guest5_diet').value ='';
+            $('.guest2-name').prop('required', false);
+            $('.guest3-name').prop('required', false);
+            $('.guest4-name').prop('required', false);
+            $('.guest5-name').prop('required', false);
             $('.extras').hide();
             $('.guest2').hide();
-            $('.guest2-name').prop('required', false);
             $('.guest3').hide();
-            $('.guest3-name').prop('required', false);
             $('.guest4').hide();
-            $('.guest4-name').prop('required', false);
             $('.guest5').hide();
-            $('.guest5-name').prop('required', false);
         }else if ($(this).val() === '2') {
             $('.extras').show();
             $('.guest2').show();
             $('.guest2-name').prop('required', true);
-            $('.guest3').hide();
+            document.getElementById('name3').value ='';
+            document.getElementById('name4').value ='';
+            document.getElementById('name5').value ='';
+            document.getElementById('guest3_diet').value ='';
+            document.getElementById('guest4_diet').value ='';
+            document.getElementById('guest5_diet').value ='';
             $('.guest3-name').prop('required', false);
-            $('.guest4').hide();
             $('.guest4-name').prop('required', false);
-            $('.guest5').hide();
             $('.guest5-name').prop('required', false);
+            $('.guest3').hide();
+            $('.guest4').hide();
+            $('.guest5').hide();
         } else if ($(this).val() === '3') {
             $('.extras').show();
             $('.guest2').show();
-            $('.guest2-name').prop('required', true);
             $('.guest3').show();
+            $('.guest2-name').prop('required', true);
             $('.guest3-name').prop('required', true);
-            $('.guest4').hide();
+            document.getElementById('name4').value ='';
+            document.getElementById('name5').value ='';
+            document.getElementById('guest4_diet').value ='';
+            document.getElementById('guest5_diet').value ='';
             $('.guest4-name').prop('required', false);
-            $('.guest5').hide();
             $('.guest5-name').prop('required', false);
+            $('.guest4').hide();
+            $('.guest5').hide();
         } else if ($(this).val() === '4') {
             $('.extras').show();
             $('.guest2').show();
-            $('.guest2-name').prop('required', true);
             $('.guest3').show();
-            $('.guest3-name').prop('required', true);
             $('.guest4').show();
+            $('.guest2-name').prop('required', true);
+            $('.guest3-name').prop('required', true);
             $('.guest4-name').prop('required', true);
-            $('.guest5').hide();
+            $('.guest2-name').prop('required', true);
+            $('.guest3-name').prop('required', true);
+            document.getElementById('name5').value ='';
+            document.getElementById('guest5_diet').value ='';
             $('.guest5-name').prop('required', false);
+            $('.guest5').hide();
         }
         else if ($(this).val() === '5') {
             $('.extras').show();
             $('.guest2').show();
-            $('.guest2-name').prop('required', true);
             $('.guest3').show();
-            $('.guest3-name').prop('required', true);
             $('.guest4').show();
-            $('.guest4-name').prop('required', true);
             $('.guest5').show();
+            $('.guest2-name').prop('required', true);
+            $('.guest3-name').prop('required', true);
+            $('.guest4-name').prop('required', true);
             $('.guest5-name').prop('required', true);
         }
 
