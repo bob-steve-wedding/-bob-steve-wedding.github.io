@@ -166,10 +166,10 @@ $(document).ready(function () {
             end: new Date('Oct 27, 2024 21:00'),
 
             // Event Address
-            address: '',
+            address: 'Appleford, 770 Mt Moro Rd, Villanova, PA 19085, USA',
 
             // Event Description
-            description: ""
+            description: "Ceremony and Luncheon to take place at Appleford.\nTea Ceremony and Banquet to take place at Jin Ding Restaurant (Bryn Mawr)."
         }
     });
 
@@ -179,13 +179,14 @@ $(document).ready(function () {
     /********************** RSVP **********************/
     $('#rsvp-form').on('submit', function (e) {
         e.preventDefault();
+
         var data = $(this).serialize();
 
         $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
 
         if (MD5($('#invite_code').val()) !== '193e205d61983f5402b0bc31a9b63cf7') {
             $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
-        } else {
+        } else {        
             $.post('https://script.google.com/macros/s/AKfycbzurOiZimwqNChGLNSrRV-c2tZD8knWE9nIZ8Tg1SainPg4cwDqGztDRMtaHhuIVhDk8A/exec', data)
                 .done(function (data) {
                     console.log(data);
@@ -204,57 +205,105 @@ $(document).ready(function () {
     });
 
     // TODO: Add check for valid invite code? Determine if possible/how to clear alert each time function is triggered
-    $('#overall_rsvp').on('change', function(){
-        if ($(this).val() === 'Yes') {
+    $('#overall_rsvp').on('change', function () {
+        var re = RegExp("^([Yy]es|[Yy])$");
+        if (re.test($(this).val())) {
             $('.affirm').show();
-            $('.ty-address').prop('required',true);
+            $('.ty-address').prop('required', true);
+            $('.ceremony_rsvp').prop('required', true);
+            $('.banquet_rsvp').prop('required', true);
+            $('.breakfast_rsvp').prop('required', true);
+            $('.partysize').prop('required', true);
         } else {
+            
+            $('.ty-address').prop('required', false);
+            $('.ceremony_rsvp').prop('required', false);
+            $('.banquet_rsvp').prop('required', false);
+            $('.breakfast_rsvp').prop('required', false);
+            $('.partysize').prop('required', false);
+            $('.guest2-name').prop('required', false);
+            $('.guest3-name').prop('required', false);
+            $('.guest4-name').prop('required', false);
+            $('.guest5-name').prop('required', false);
+            document.getElementById('ty-address').value ='';
+            document.getElementById('ceremony_rsvp').value ='';
+            document.getElementById('banquet_rsvp').value ='';
+            document.getElementById('breakfast_rsvp').value ='';
+            document.getElementById('partysize').value ='';
+            document.getElementById('song_requests').value ='';
+            document.getElementById('name2').value ='';
+            document.getElementById('name3').value ='';
+            document.getElementById('name4').value ='';
+            document.getElementById('name5').value ='';
+            document.getElementById('guest_diet').value ='';
+            document.getElementById('guest2_diet').value ='';
+            document.getElementById('guest3_diet').value ='';
+            document.getElementById('guest4_diet').value ='';
+            document.getElementById('guest5_diet').value ='';
             $('.affirm').hide();
-            $('.ty-address').prop('required',false);
+            $('.extras').hide();
+            $('.guest2').hide();
+            $('.guest3').hide();
+            $('.guest4').hide();
+            $('.guest5').hide();
         }
     });
 
-    $('#partysize').on('change', function(){
+    $('#partysize').on('change', function () {
         // 1 guest is always required
-         if ($(this).val() === '2'){
-            $('.guest2').show();
-            $('.guest2-name').prop('required',true);
+        if ($(this).val() === '1'){
+            $('.extras').hide();
+            $('.guest2').hide();
+            $('.guest2-name').prop('required', false);
             $('.guest3').hide();
-            $('.guest3-name').prop('required',false);
+            $('.guest3-name').prop('required', false);
             $('.guest4').hide();
-            $('.guest4-name').prop('required',false);
+            $('.guest4-name').prop('required', false);
             $('.guest5').hide();
-            $('.guest5-name').prop('required',false);
-        } else if ($(this).val() === '3'){
+            $('.guest5-name').prop('required', false);
+        }else if ($(this).val() === '2') {
+            $('.extras').show();
             $('.guest2').show();
-            $('.guest2-name').prop('required',true);
-            $('.guest3').show();
-            $('.guest3-name').prop('required',true);
+            $('.guest2-name').prop('required', true);
+            $('.guest3').hide();
+            $('.guest3-name').prop('required', false);
             $('.guest4').hide();
-            $('.guest4-name').prop('required',false);
+            $('.guest4-name').prop('required', false);
             $('.guest5').hide();
-            $('.guest5-name').prop('required',false);
-        } else if ($(this).val() === '4'){
+            $('.guest5-name').prop('required', false);
+        } else if ($(this).val() === '3') {
+            $('.extras').show();
             $('.guest2').show();
-            $('.guest2-name').prop('required',true);
+            $('.guest2-name').prop('required', true);
             $('.guest3').show();
-            $('.guest3-name').prop('required',true);
+            $('.guest3-name').prop('required', true);
+            $('.guest4').hide();
+            $('.guest4-name').prop('required', false);
+            $('.guest5').hide();
+            $('.guest5-name').prop('required', false);
+        } else if ($(this).val() === '4') {
+            $('.extras').show();
+            $('.guest2').show();
+            $('.guest2-name').prop('required', true);
+            $('.guest3').show();
+            $('.guest3-name').prop('required', true);
             $('.guest4').show();
-            $('.guest4-name').prop('required',true);
+            $('.guest4-name').prop('required', true);
             $('.guest5').hide();
-            $('.guest5-name').prop('required',false);
+            $('.guest5-name').prop('required', false);
         }
-        else if ($(this).val() === '5'){
+        else if ($(this).val() === '5') {
+            $('.extras').show();
             $('.guest2').show();
-            $('.guest2-name').prop('required',true);
+            $('.guest2-name').prop('required', true);
             $('.guest3').show();
-            $('.guest3-name').prop('required',true);
+            $('.guest3-name').prop('required', true);
             $('.guest4').show();
-            $('.guest4-name').prop('required',true);
+            $('.guest4-name').prop('required', true);
             $('.guest5').show();
-            $('.guest5-name').prop('required',true);
+            $('.guest5-name').prop('required', true);
         }
-            
+
     });
 
 });
@@ -275,7 +324,7 @@ function openApplefordMenu(evt, tabname) {
     }
     document.getElementById(tabname).style.display = "block";
     evt.currentTarget.classList.add("selected");
-} 
+}
 
 // Banquet Menu
 function openBanquetMenu(evt, tabname) {
@@ -309,13 +358,13 @@ function openAttractions(evt, tabname) {
     evt.currentTarget.classList.add("selected");
 }
 
- 
+
 
 
 
 /********************** Extras **********************/
 
-window.addEventListener("DOMContentLoaded", function(){
+window.addEventListener("DOMContentLoaded", function () {
     date = new Date("Oct 27, 2024 11:00:00 GMT-05:00");
     new FlipDown(date.getTime() / 1000, "weddingStart").start();
 
@@ -327,10 +376,10 @@ window.addEventListener("DOMContentLoaded", function(){
             'and we would love for you to be a part of it!</p><h3>Here\'s the Countdown:</h3>';
     }
 });
- 
+
 // Google map
 function initMap() {
-    var ceremonyLocation = {lat: 40.053529, lng: -75.325912};
+    var ceremonyLocation = { lat: 40.053529, lng: -75.325912 };
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 12,
         center: ceremonyLocation,
@@ -343,7 +392,7 @@ function initMap() {
         title: "Ceremony"
     });
 
-    var banquetLocation = {lat: 40.022860572142974, lng: -75.32603667570083};
+    var banquetLocation = { lat: 40.022860572142974, lng: -75.32603667570083 };
 
     var marker2 = new google.maps.Marker({
         position: banquetLocation,

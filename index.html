@@ -263,11 +263,11 @@
                                                     <h5>Gourmet Bread & Crackers</h5>
                                                     <h5>Fresh & Dried Fruits</h5>
                                                     <h5>Olives, Cornichons, and Pepper Shooters
-                                                    <h5>Marinated & Pickled Vegetables</h5>
-                                                    <h5>Grilled Vegetables</h5>
-                                                    <h5>Whole Grain Mustard</h5>
-                                                    <h5>Seasonal Fruit Jam</h5>
-                                                    <h5>Honey</h5>
+                                                        <h5>Marinated & Pickled Vegetables</h5>
+                                                        <h5>Grilled Vegetables</h5>
+                                                        <h5>Whole Grain Mustard</h5>
+                                                        <h5>Seasonal Fruit Jam</h5>
+                                                        <h5>Honey</h5>
                                                 </div>
                                             </div>
                                         </div>
@@ -657,7 +657,8 @@
                     </div>
                     <div class="wp12">
                         <h5>Other Hotels</h5>
-                        <p>As for other lodging, there is also a Residence Inn located in Conshohocken in addition to hotels in nearby Plymouth Meeting.</p>
+                        <p>As for other lodging, there is also a Residence Inn located in Conshohocken in addition to
+                            hotels in nearby Plymouth Meeting.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
@@ -811,7 +812,8 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <p>*Please note that these locations are takeout or limited seating only and may require calling ahead.</p>
+                                    <p>*Please note that these locations are takeout or limited seating only and may
+                                        require calling ahead.</p>
                                 </div>
                             </div>
                         </div>
@@ -898,7 +900,7 @@
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
                     <h3>What are you waiting for?</h3>
-                    <p>We would greatly appreciate if you could RSVP by September 15, 2024!</p>
+                    <p>We would greatly appreciate if you could RSVP by <strong>September 15, 2024!</strong></p>
                     <form id="rsvp-form" class="rsvp-form" action="" method="POST">
                         <div class="row">
                             <div class="col-md-6 col-sm-6">
@@ -909,7 +911,7 @@
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-input-group affirm" style="display:none;">
-                                    <i class="fa fa-cutlery"></i><input name="guest_diet" class=""
+                                    <i class="fa fa-cutlery"></i><input name="guest_diet" id="guest_diet"
                                         placeholder="Your Dietary Restriction(s)">
                                 </div>
                             </div>
@@ -922,22 +924,22 @@
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6">
-                                <div class="form-input-group affirm ty-address">
-                                    <i class="fa fa-home"></i><input type="text" name="address" class=""
-                                        placeholder="Your Address">
+                                <div class="form-input-group affirm" style="display:none;">
+                                    <i class="fa fa-home"></i><input type="text" name="address" class="ty-address"
+                                        id="ty-address" placeholder="Your Address">
                                 </div>
                             </div>
+                        </div>
+                        <div class="row">
+                            <br />
+                            <p>Will you be attending our wedding? (Y/N)</p>
                         </div>
                         <div class="row">
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-input-group">
                                     <i class="fa fa-paper-plane"></i>
-                                    <!-- TODO Cleanup dropdown menu length so that left edge lines up with divider -->
-                                    <select id="overall_rsvp" name="overall_rsvp">
-                                        <option hidden disabled selected value>Will You Be Attending?</option>
-                                        <option value="Yes">Yes, I'm Coming!</option>
-                                        <option value="No">No, I Can't Make It!</option>
-                                    </select>
+                                    <input type="text" name="overall_rsvp" id="overall_rsvp" class=""
+                                        placeholder="Will You Be Attending?" pattern="^([Yy]es|[Nn]o|[Yy]|[Nn])$" required>
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6">
@@ -947,44 +949,73 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="row affirm" style="display:none;">
+                            <br />
+                            <p>Which events will you be attending? (Y/N)</p>
+                        </div>
                         <div class="row">
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-input-group affirm" style="display:none;">
                                     <i class="fa fa-calendar-check-o"></i>
-                                    <!-- TODO Convert to Multiple Select Dropdown Menu -->
-                                    <!-- TODO Cleanup dropdown menu length so that left edge lines up with divider -->
-                                    <select id="events_rsvp" name="events_rsvp" class="" multiple>
-                                        <option value="Ceremony and Luncheon"> Ceremony and Luncheon</option>
-                                        <option value="Tea Ceremony and Banquet"> Tea Ceremony and Banquet</option>
-                                        <option value="Breakfast Buffet"> Breakfast Buffet</option>
-                                    </select>
+                                    <input type="text" name="ceremony_luncheon" class="ceremony_rsvp" id="ceremony_rsvp"
+                                        placeholder="Ceremony & Luncheon" pattern="^([Yy]es|[Nn]o|[Yy]|[Nn])$">
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6">
+                                <div class="form-input-group affirm"  style="display:none;">
+                                    <i class="fa fa-calendar-check-o"></i>
+                                    <input type="text" name="tea-ceremony_banquet" class="banquet_rsvp" id="banquet_rsvp"
+                                        placeholder="Tea Ceremony & Banquet" pattern="^([Yy]es|[Nn]o|[Yy]|[Nn])$">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
                                 <div class="form-input-group affirm" style="display:none;">
-                                    <i class="fa fa-music"></i><input type="text" name="song_requests" class=""
+                                    <i class="fa fa-calendar-check-o"></i>
+                                    <input type="text" name="breakfast_buffet" class="breakfast_rsvp" id="breakfast_rsvp"
+                                        placeholder="Breakfast Buffet" pattern="^([Yy]es|[Nn]o|[Yy]|[Nn])$">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row affirm" style="display:none;">
+                            <br />
+                            <p>Any song requests?</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-input-group affirm" style="display:none;">
+                                    <i class="fa fa-music"></i><input type="text" name="song_requests" class="" id="song_requests"
                                         placeholder="Song Requests">
                                 </div>
                             </div>
+                        </div>
+                        <div class="row affirm" style="display:none;">
+                            <br />
+                            <p>What is your party size?</p>
                         </div>
                         <div class="row">
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-input-group affirm" style="display:none;">
                                     <i class="fa fa-users"></i><input type="text" name="party_size" id="partysize"
-                                    inputmode="numeric" pattern="[1-5].*?" class="" 
-                                    placeholder="Party Size (1-5)" required>
+                                        inputmode="numeric" pattern="^[1-5].*?" class="partysize" placeholder="Party Size (1-5)">
                                 </div>
                             </div>
+                        </div>
+                        <div class="row extras" style="display:none;">
+                            <br />
+                            <p>Please tell us who will be attending with you.</p>
                         </div>
                         <div class="row">
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-input-group guest2" style="display:none;">
-                                    <i class="fa fa-user"></i><input name="name2" class="guest2-name" placeholder="2nd Guest Name">
+                                    <i class="fa fa-user"></i><input name="name2" class="guest2-name" id="name2" 
+                                        placeholder="2nd Guest Name">
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-input-group guest2" style="display:none;">
-                                    <i class="fa fa-cutlery"></i><input name="guest2_diet" class="guest2"
+                                    <i class="fa fa-cutlery"></i><input name="guest2_diet" class="guest2" id="guest2_diet"
                                         placeholder="2nd Guest Diet. Restrict.">
                                 </div>
                             </div>
@@ -992,12 +1023,13 @@
                         <div class="row">
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-input-group guest3" style="display:none;">
-                                    <i class="fa fa-user"></i><input name="name3" class="guest3-name" placeholder="3rd Guest Name">
+                                    <i class="fa fa-user"></i><input name="name3" class="guest3-name" id="name3"
+                                        placeholder="3rd Guest Name">
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-input-group guest3" style="display:none;">
-                                    <i class="fa fa-cutlery"></i><input name="guest3_diet" class="guest3"
+                                    <i class="fa fa-cutlery"></i><input name="guest3_diet" class="guest3" id="guest3_diet"
                                         placeholder="3rd Guest Diet. Restrict.">
                                 </div>
                             </div>
@@ -1005,12 +1037,13 @@
                         <div class="row">
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-input-group guest4" style="display:none;">
-                                    <i class="fa fa-user"></i><input name="name4" class="guest4-name" placeholder="4th Guest Name">
+                                    <i class="fa fa-user"></i><input name="name4" class="guest4-name" id="name4"
+                                        placeholder="4th Guest Name">
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-input-group guest4" style="display:none;">
-                                    <i class="fa fa-cutlery"></i><input name="guest4_diet" class="guest4"
+                                    <i class="fa fa-cutlery"></i><input name="guest4_diet" class="guest4" id="guest4_diet"
                                         placeholder="4th Guest Diet. Restrict.">
                                 </div>
                             </div>
@@ -1018,12 +1051,13 @@
                         <div class="row">
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-input-group guest5" style="display:none;">
-                                    <i class="fa fa-user"></i><input name="name5" class="guest5-name" placeholder="5th Guest Name">
+                                    <i class="fa fa-user"></i><input name="name5" class="guest5-name" id="name5"
+                                        placeholder="5th Guest Name">
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-input-group guest5" style="display:none;">
-                                    <i class="fa fa-cutlery"></i><input name="guest5_diet" class=""
+                                    <i class="fa fa-cutlery"></i><input name="guest5_diet" class="guest5" id="guest5_diet"
                                         placeholder="5th Guest Diet. Restrict.">
                                 </div>
                             </div>
@@ -1084,7 +1118,7 @@
                                     <h5>Where will wedding updates be posted?</h5>
                                     <p>Please check this website for any updates as needed. If you confirm your
                                         contact information by RSVPing, we will also send out emails to those
-                                        whose email contact information we have on file.</p>
+                                        that we have on file.</p>
                                 </div>
                             </div><!-- /.modal-content -->
                         </div><!-- /.modal-dialog -->
