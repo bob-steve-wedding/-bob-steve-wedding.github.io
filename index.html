@@ -903,6 +903,30 @@
                     <p>We would greatly appreciate if you could RSVP by <strong>September 15, 2024!</strong></p>
                     <form id="rsvp-form" class="rsvp-form" action="" method="POST">
                         <div class="row">
+                            <p>Will you be attending our wedding? (Y/N)</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-input-group">
+                                    <i class="fa fa-paper-plane"></i>
+                                    <input type="text" name="overall_rsvp" id="overall_rsvp" class="" autocomplete="off"
+                                        placeholder="Will You Be Attending?" title="Will You Be Attending?"
+                                        pattern="^([Yy]es|[Nn]o|[Yy]|[Nn])$" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-input-group">
+                                    <i class="fa fa-key"></i><input type="text" name="invite_code" id="invite_code"
+                                        class="" autocomplete="off" placeholder="Invite Code" title="Invite Code"
+                                        required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <br />
+                            <p>What is your info?</p>
+                        </div>                        
+                        <div class="row">
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-input-group">
                                     <i class="fa fa-user"></i><input name="name" class="" placeholder="Your Name"
@@ -929,27 +953,6 @@
                                     <i class="fa fa-home"></i><input type="text" name="address" class="ty-address"
                                         id="ty-address" autocomplete="off" placeholder="Your Address"
                                         title="Your Address">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <br />
-                            <p>Will you be attending our wedding? (Y/N)</p>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 col-sm-6">
-                                <div class="form-input-group">
-                                    <i class="fa fa-paper-plane"></i>
-                                    <input type="text" name="overall_rsvp" id="overall_rsvp" class="" autocomplete="off"
-                                        placeholder="Will You Be Attending?" title="Will You Be Attending?"
-                                        pattern="^([Yy]es|[Nn]o|[Yy]|[Nn])$" required>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <div class="form-input-group">
-                                    <i class="fa fa-key"></i><input type="text" name="invite_code" id="invite_code"
-                                        class="" autocomplete="off" placeholder="Invite Code" title="Invite Code"
-                                        required>
                                 </div>
                             </div>
                         </div>
