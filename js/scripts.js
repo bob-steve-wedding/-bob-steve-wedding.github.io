@@ -205,7 +205,7 @@ $(document).ready(function () {
     });
 
     // TODO: Add check for valid invite code? Determine if possible/how to clear alert each time function is triggered
-    $('#overall_rsvp').on('change', function () {
+    $('#overall_rsvp').on('change input', function () {
         var re = RegExp("^([Yy]es|[Yy])$");
         if (re.test($(this).val())) {
             $('.affirm').show();
@@ -248,7 +248,7 @@ $(document).ready(function () {
         }
     });
 
-    $('#partysize').on('change', function () {
+    $('#partysize').on('change input', function () {
         // 1 guest is always required
         if ($(this).val() === '1'){
             document.getElementById('name2').value ='';
