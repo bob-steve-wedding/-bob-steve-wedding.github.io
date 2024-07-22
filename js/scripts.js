@@ -214,12 +214,13 @@ $(document).ready(function () {
             $('.banquet_rsvp').prop('required', true);
             $('.breakfast_rsvp').prop('required', true);
             $('.partysize').prop('required', true);
+            document.getElementById('partysize').value ='';
         } else {
             document.getElementById('ty-address').value ='';
             document.getElementById('ceremony_rsvp').value ='';
             document.getElementById('banquet_rsvp').value ='';
             document.getElementById('breakfast_rsvp').value ='';
-            document.getElementById('partysize').value ='';
+            document.getElementById('partysize').value ='0';
             document.getElementById('song_requests').value ='';
             document.getElementById('name2').value ='';
             document.getElementById('name3').value ='';
