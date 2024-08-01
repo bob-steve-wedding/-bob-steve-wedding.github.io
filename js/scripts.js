@@ -214,7 +214,6 @@ $(document).ready(function () {
             $('.banquet_rsvp').prop('required', true);
             $('.breakfast_rsvp').prop('required', true);
             $('.partysize').prop('required', true);
-            document.getElementById('partysize').value ='';
         } else {
             document.getElementById('ty-address').value ='';
             document.getElementById('ceremony_rsvp').value ='';
