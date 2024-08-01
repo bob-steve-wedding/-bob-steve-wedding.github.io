@@ -205,6 +205,7 @@ $(document).ready(function () {
     });
 
     // TODO: Add check for valid invite code? Determine if possible/how to clear alert each time function is triggered
+    // TODO: Change party size = 0 for No, but clear field for "yes" to show placeholder text?
     $('#overall_rsvp').on('change input', function () {
         var re = RegExp("^([Yy]es|[Yy])$");
         if (re.test($(this).val())) {
@@ -213,7 +214,6 @@ $(document).ready(function () {
             $('.ceremony_rsvp').prop('required', true);
             $('.banquet_rsvp').prop('required', true);
             $('.breakfast_rsvp').prop('required', true);
-            $('.partysize').prop('required', true);
         } else {
             document.getElementById('ty-address').value ='';
             document.getElementById('ceremony_rsvp').value ='';
